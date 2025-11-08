@@ -1,0 +1,206 @@
+:root {
+  --bg-card: #f4f6f8;
+  --panel-bg: #ffffff;
+  --panel-border: #eceff3;
+  --shadow: 0 2px 5px rgba(0,0,0,0.06);
+}
+
+.dashboard-container {
+ 
+  width: 100%;       /* ใช้เต็มความกว้างที่มี */
+  max-width: 1200px; /* (ถ้าต้องการจำกัดไม่ให้กว้างเกิน) */
+  margin: 0 auto;    /* จัดกึ่งกลางเวลาอยู่จอใหญ่ */
+}
+
+.stats-row {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.stat-card {
+  background: var(--bg-card);
+  border-radius: 12px;
+  padding: 1rem 1.25rem;
+  text-align: center;
+  box-shadow: var(--shadow);
+  border: 1px solid var(--panel-border);
+}
+
+.stat-card h3 {
+  margin: 0 0 .25rem 0;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #223;
+}
+
+.stat-total .machine-dropdown {
+  position: absolute;
+  bottom: 2px;
+  right: 2px;
+  width: 80px;
+  font-size: 14px;
+  background-color: #0419fc; /* สีน้ำเงินเข้ม */
+  color: white;
+  border: #000fb3;
+  border-radius: 6px;
+  padding: 4px 6px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+}
+
+.stat-total .machine-dropdown:focus {
+  outline: none;
+  border: 1px solid rgb(0, 7, 202);
+}
+
+.stat-total {
+  background-color: rgb(7, 19, 246);
+  font-size: 1.2rem;
+  margin: 0;
+  font-weight: 700;
+  color: #ffffff;
+  align-items: center;
+  text-align: center;
+  border-radius: 5px;
+  box-shadow: 1px 1px 5px 5px rgb(214, 214, 214);
+}
+.stat-inprogress {
+  background-color: rgb(246, 146, 7);
+  font-size: 1.2rem;
+  margin: 0;
+  font-weight: 700;
+  color: #ffffff;
+  align-items: center;
+  text-align: center;
+  border-radius: 5px;
+  box-shadow: 1px 1px 5px 5px rgb(214, 214, 214);
+}
+.stat-finished {
+  background-color: rgb(6, 114, 0);
+  font-size: 1.2rem;
+  margin: 0;
+  font-weight: 700;
+  color: #ffffff;
+  align-items: center;
+  text-align: center;
+  border-radius: 5px;
+  box-shadow: 1px 1px 5px 5px rgb(214, 214, 214);
+}
+.stat-request {
+  background-color: rgb(255, 0, 0);
+  font-size: 1.2rem;
+  margin: 0;
+  font-weight: 700;
+  color: #ffffff;
+  align-items: center;
+  text-align: center;
+  border-radius: 5px;
+  box-shadow: 1px 1px 5px 5px rgb(214, 214, 214);
+}
+.stat-cancel {
+  background-color: rgb(167, 167, 167);
+  font-size: 1.2rem;
+  margin: 0;
+  font-weight: 700;
+  color: #ffffff;
+  align-items: center;
+  text-align: center;
+  border-radius: 5px;
+  box-shadow: 1px 1px 1px 1px rgb(214, 214, 214);
+}
+.h3-text{
+  margin-top: 0.7rem;
+  font-size: 1.1rem;
+}
+
+
+/* ให้ panel ใน .panels มีความสูงเท่ากัน */
+.panels {
+ 
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* ให้เท่ากันแทน 2:1 */
+  align-items: stretch;           /* ดึงลูกให้สูงเท่ากัน */
+}
+
+/* panel แต่ละอันขยายเต็มความสูง */
+.panel {
+  display: flex;
+  flex-direction: column;
+  padding: 0.3rem;
+  border: rgb(202, 202, 202) solid 2px;
+  border-radius: 5px;
+}
+
+/* chart-box กินพื้นที่เหลือทั้งหมด */
+.chart-box {
+  flex: 1;
+  height: auto;      /* ใช้ flex แทนการ fix */
+  min-height: 320px; /* กันไม่ให้เล็กเกินไป */
+}
+
+.recent-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+  background: #fff;
+  border: 1px solid var(--panel-border);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: var(--shadow);
+}
+
+.recent-table thead th {
+  text-align: left;
+  font-weight: 700;
+  font-size: .95rem;
+  background: #fafbfc;
+  border-bottom: 1px solid var(--panel-border);
+  padding: .75rem;
+  color: #333;
+}
+
+.recent-table tbody td {
+  padding: .75rem;
+  border-bottom: 1px solid var(--panel-border);
+  font-size: .95rem;
+  color: #222;
+}
+
+.recent-table tbody tr:hover {
+  background: #f9fbff;
+}
+
+/* สถานะ (ถ้าจะใช้ badge) */
+.badge {
+  display: inline-block;
+  padding: .15rem .5rem;
+  border-radius: 999px;
+  font-size: .8rem;
+  border: 1px solid transparent;
+}
+.badge--request {
+  background-color: #f70509;
+  color: white;
+}
+.badge--progress {
+  background-color: #ff9800;
+  color: white;
+}
+.badge--done {
+  background-color: #00a00b;
+  color: white;
+}
+/* Responsive */
+@media (max-width: 1024px) {
+  .panels {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .stats-row {
+    grid-template-columns: 1fr;
+  }
+}
+

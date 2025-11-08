@@ -1,0 +1,322 @@
+/* ----- Page container (A4) ----- */
+.mr-root { background:#dbdbdb; padding:18px; }
+.mr-a4   { margin:0 auto; max-width:1000px; background:#fff; border:1px solid #d8dde4; border-radius:12px; box-shadow:0 6px 22px rgba(0,0,0,.06); padding:14px 18px 22px; }
+
+
+/* Header */
+/* .mr-header{ display:flex; align-items:center; justify-content:space-between; border-bottom:2px solid #e8edf2; padding:6px 0 10px; }
+.mr-header h1{ margin:0; font-size:22px; font-weight:800; letter-spacing:.6px; color:#111827; } */
+.mr-btn{ background:#0ea5e9; border:none; color:#fff; padding:8px 14px; border-radius:10px; font-weight:700; cursor:pointer; }
+.mr-btn:hover{ background:#0284c7; }
+
+/* Grid 24-cols */
+.mr-row{ display:grid; grid-template-columns:repeat(24,1fr); gap:10px; margin-top:10px; }
+.mr-col-24{ grid-column:span 24; } .mr-col-23{ grid-column:span 23; } .mr-col-22{ grid-column:span 22; }
+.mr-col-21{ grid-column:span 21; } .mr-col-20{ grid-column:span 20; } .mr-col-19{ grid-column:span 19; }
+.mr-col-18{ grid-column:span 18; } .mr-col-17{ grid-column:span 17; } .mr-col-16{ grid-column:span 16; }
+.mr-col-15{ grid-column:span 15; } .mr-col-14{ grid-column:span 14; } .mr-col-13{ grid-column:span 13; }
+.mr-col-12{ grid-column:span 12; } .mr-col-11{ grid-column:span 11; } .mr-col-10{ grid-column:span 10; }
+.mr-col-9 { grid-column:span 9;  } .mr-col-8 { grid-column:span 8;  } .mr-col-7 { grid-column:span 7;  }
+.mr-col-6 { grid-column:span 6;  } .mr-col-5 { grid-column:span 5;  } .mr-col-4 { grid-column:span 4;  }
+.mr-col-3 { grid-column:span 3;  } .mr-col-2 { grid-column:span 2;  } .mr-col-1 { grid-column:span 1;  }
+
+/* Sections */
+.mr-section{ border:1px solid #e5e7eb; border-radius:10px; padding:12px; margin-top:12px; }
+.mr-section.slim{ padding:10px; }
+.mr-subtitle{ font-weight:800; margin:2px 0 6px; color:#0f172a; font-size:13px; }
+.mr-subtitle.smallcaps{ letter-spacing:.4px; }
+.mr-subtitle.big{ font-size:14px; }
+
+/* Ribbon header (เหมือนกล่องหัวข้อในภาพ) */
+.mr-ribbon{ display:flex; align-items:flex-end; justify-content:space-between; border:1px solid #cfd6df; background:#f2f5f9; padding:8px 10px; border-radius:8px; }
+.mr-ribbon-title{ font-weight:800; color:#0f172a; }
+.mr-ribbon-inline{ display:flex; align-items:center; gap:8px; }
+.muted{ color:#6b7280; }
+
+/* Labels + inputs */
+.mr-label{ font-size:11px; font-weight:800; color:#1f2937; letter-spacing:.3px; }
+.mr-line-wrap{ display:flex; flex-direction:column; gap:4px; }
+.mr-line{ width:100%; border:none; border-bottom:2px dotted #3f4a5a; padding:5px 2px 6px; font-size:14px; }
+.mr-line:focus{ outline:none; border-bottom-color:#0ea5e9; }
+.mr-box{ width:100%; border:1px solid #cbd5e1; border-radius:8px; padding:8px 10px; font-size:14px; }
+.mr-box.dotted{ background-image: radial-gradient(#f4efef 1px, transparent 1px); background-size: 6px 6px; background-position: 0 12px; }
+
+/* Radios & checkboxes */
+.mr-radios{ display:flex; gap:18px; flex-wrap:wrap; font-size:14px; }
+.mr-radios.tight label{ margin-right:0; }
+.mr-checkboxes{ display:flex; flex-direction:column; gap:6px; font-size:14px; line-height:1.35; word-break:keep-all; }
+.cause-grid .mr-cause{ border:1px dashed #cfd6df; border-radius:8px; padding:8px 10px; }
+.mr-cause-title{ font-weight:800; margin-bottom:6px; color:#0f172a; }
+
+/* Table */
+.mr-table{ width:100%; border-collapse:collapse; margin-top:6px; }
+.mr-table th,.mr-table td{ border:1px solid #dfe5ec; padding:1px 2px; font-size:14px; }
+.mr-table thead th{ background:#f5f7fb; font-weight:800; }
+.tc{ text-align:center; }
+
+/* Small / Very small rows — ให้แน่นแบบฟอร์ม */
+.small .mr-label{ font-size:10.8px; }
+.very-small .mr-label{ font-size:10px; }
+
+/* Meta line */
+.mr-meta{ color:#334155; }
+
+/* Utilities */
+.mr-right{ text-align:right; }
+.w-180{ width:180px; } .w-120{ width:120px; }
+
+
+/* ==== CAUSE OF PROBLEM (single panel with vertical separators) ==== */
+.cause-panel{
+  border:1px solid #c1c2c3;
+  border-radius:8px;
+  padding:1px;
+}
+.cause-columns{
+  display:grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap:0;                 /* ไม่มีช่องว่างระหว่างคอลัมน์ เพื่อให้เส้นกั้นติดกัน */
+}
+.cause-col{
+  padding:1px 2px;
+  min-height:160px;
+  border-right:1px solid #cfd6df;
+}
+.cause-col:last-child{ border-right:none; }
+.cause-title{
+  font-weight:700;
+  color:#0f172a;
+  margin-bottom:6px;
+}
+.cause-radio{
+  display:flex;
+  gap:14px;
+  margin:2px 0 6px;
+  font-size:13px;
+}
+.cause-panel .mr-checkboxes{
+  gap:2px;
+  font-size:12px;
+  line-height:1.35;
+  word-break:keep-all;
+}
+
+
+/* --- เส้นปะแบบฟอร์ม (label : แล้วตามด้วยเส้นจุด) --- */
+.paper-row { align-items:end; }
+.paper-field { display:grid; grid-template-columns:auto 1fr; column-gap:8px; align-items:end; }
+.paper-label { font-weight:800; font-size:11px; color:#1f2937; white-space:nowrap; }
+.paper-dots { position:relative; height:28px; border-bottom:2px dotted #334155; }
+.paper-dots input{
+  position:absolute; inset:0;
+  border:none; background:transparent;
+  font-size:14px; padding:2px 4px;
+}
+.paper-dots input[type="date"],
+.paper-dots input[type="time"]{
+  appearance: none; -webkit-appearance: none; /* ให้ดูเป็นเส้นปะเหมือนกัน */
+}
+
+/* --- กล่อง MACHINE STATUS --- */
+.status-box{
+  border:2px solid #7b8794;
+  border-radius:6px;
+  padding:8px 10px;
+  margin-top:12px;
+  background:#f8fafc;
+}
+.status-title{ font-weight:800; color:#0f172a; margin-bottom:6px; font-size:13px; }
+.status-options{ display:flex; gap:26px; flex-wrap:wrap; }
+.status-options label{ display:flex; align-items:center; gap:8px; }
+.status-options .option-text{ display:flex; flex-direction:column; }
+.status-options .option-text small{ font-size:11.5px; }
+
+
+.mr-radios2.tight2 {
+  display: flex;
+  gap: 20px; /* หรือปรับเป็น 10px / 15px ตามต้องการ */
+  align-items: center;
+}
+
+.mr-radios2.tight2 label {
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  white-space: nowrap;
+}
+
+.mr-radios2.tight2 input[type="radio"] {
+  margin-right: 6px;
+}
+
+.ml-auto {
+  margin-left: auto;
+}
+
+
+.input-text {
+  width: 100%;
+  padding: 5px 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.form-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    /* margin-bottom: 16px; */
+  }
+
+  .form-group {
+    flex: 1 1 22%;
+    min-width: 180px;
+  }
+
+  .field-label {
+    font-weight: bold;
+  }
+
+  .field-hint {
+    font-size: 12px;
+    color: #555;
+    /* margin-bottom: 4px; */
+  }
+
+  .dotted-input {
+    border: none;
+    border-bottom: 1px dotted #000;
+    width: 100%;
+    height: 24px;
+    background: transparent;
+    outline: none;
+    font-size: 14px;
+  }
+
+  #record-check-sheet{
+    background-color: #251c50;
+    box-shadow: 1px 1px 2px 2px rgb(104, 104, 104);
+    padding: 0.3rem;
+    margin-top: 0.3rem;
+    color: white;
+  }
+  #record-check-sheetS{
+    background-color: #251c50;
+    box-shadow: 1px 1px 2px 2px rgb(104, 104, 104);
+    color: white;
+  }
+  .table-board-mm{
+    background-color: #251c50;
+  }
+
+.status-request {
+  background-color: rgb(255, 0, 0) !important;
+  color: rgb(255, 255, 255) !important;
+  animation: blink 1s infinite;
+}
+.status-cancel {
+  background-color: rgb(148, 148, 148) !important;
+  color: rgb(255, 255, 255) !important;
+}
+
+.status-inprogress {
+  background-color: rgb(255, 177, 51) !important;
+  color: black !important;
+}
+
+.status-finished {
+  background-color: green !important;
+  color: white !important;
+}
+
+/* วางทุกอย่างในแถวเดียว และชิดตาม baseline ให้ตรงเส้นปะ */
+.accept-row{
+  display: flex;
+  align-items: baseline;   /* <<< สำคัญ: ใช้ baseline แทน center */
+  flex-wrap: nowrap;
+}
+
+/* ป้ายด้านซ้ายให้กว้างคงที่คล้ายต้นฉบับ */
+.accept-label{
+  width: 9rem;  
+  font-weight: 700;
+  font-size: 0.9rem;
+}
+
+/* อินพุตเส้นปะให้กว้างครึ่งหนึ่งของเดิมประมาณ */
+.accept-input{
+  width: 10.25rem;            /* หรือ 30% ถ้าต้องการอิงเปอร์เซ็นต์ */
+  flex: 0 0 7.25rem;
+  line-height: 1;          /* ให้ baseline แม่น */
+  padding-bottom: 2px;     /* เส้นปะจะดูพอดีบรรทัด */
+  font-size: 0.965rem;
+}
+
+/* ข้อความอังกฤษให้ยึดบรรทัดเดียวกับ input แล้วพับบรรทัดต่อไปถ้ายาว */
+.accept-note{
+  font-size: 0.78rem;
+  line-height: 2.5;
+  margin-left: 1rem;
+  white-space: normal;     /* อนุญาตให้ตัดบรรทัด */
+}
+
+/* บรรทัดภาษาไทย */
+.accept-notes-th{
+  font-size: 0.75rem;
+  line-height: 1.15;
+  margin-left: 20.0rem;
+}
+
+/* บรรทัดเก็บเอกสาร */
+.accept-keep{
+  font-size: 0.9rem;
+  margin-top: 8px;
+}
+
+.approve-green {
+  background-color: green !important;
+  color: white !important;
+}
+
+.approve-red {
+  background-color: #ff0026 !important;  /* แดงอ่อน */
+  color: #ffffff !important;             /* แดงเข้ม */
+}
+
+#board-mm{
+  background-color: rgb(229, 229, 229);
+   border: solid rgb(127, 127, 194) 1px;
+}
+
+#request-name{
+  background-color: #e7e7e7;
+}
+
+
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+/* Print */
+@media print{
+  .no-print{ display:none !important; }
+  .mr-root{ background:#fff; padding:0; }
+  .mr-a4{ box-shadow:none; border:none; border-radius:0; padding:8px 10px; max-width:100%; }
+  .mr-section{ break-inside:avoid; }
+}
+
+
+@keyframes walkBackAndForth {
+  0%   { transform: translateX(0); }
+  50%  { transform: translateX(10px); }
+  100% { transform: translateX(0); }
+}
+
+.walk-animation {
+  animation: walkBackAndForth 1s ease-in-out infinite;
+}
+
+

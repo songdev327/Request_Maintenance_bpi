@@ -1,0 +1,27 @@
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.3);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background: white;
+  padding: 2rem;
+  width: 95%;              /* 👈 กว้างขึ้นกว่าเดิม */
+  max-width: 1300px;       /* 👈 รองรับจอใหญ่ */
+  border-radius: 12px;
+  max-height: 95vh;        /* 👈 เพิ่มความสูงของ modal */
+  overflow-y: auto;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.25);
+}
+
+input[readonly] {
+  pointer-events: none;
+}

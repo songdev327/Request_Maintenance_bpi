@@ -1,0 +1,2900 @@
+[
+  {
+    "Machine_No": "AB-01",
+    "Serial_No": "",
+    "Model": "",
+    "Maker": "MACHINE SHOP 2"
+  },
+  {
+    "Machine_No": "AG-01",
+    "Serial_No": 200806008,
+    "Model": "889-DEE-103",
+    "Maker": "MINEBEA"
+  },
+  {
+    "Machine_No": "AG-02",
+    "Serial_No": 200808009,
+    "Model": "889-DEE-103",
+    "Maker": "MINEBEA"
+  },
+  {
+    "Machine_No": "AG-03",
+    "Serial_No": 200509004,
+    "Model": "889-DEE-103",
+    "Maker": "MINEBEA"
+  },
+  {
+    "Machine_No": "AG-04",
+    "Serial_No": 200509003,
+    "Model": "889-DEE-103",
+    "Maker": "MINEBEA"
+  },
+  {
+    "Machine_No": "AG-05",
+    "Serial_No": 889,
+    "Model": "889-DEE-103",
+    "Maker": "MINEBEA"
+  },
+  {
+    "Machine_No": "AG-06",
+    "Serial_No": 200407001,
+    "Model": "869-DEE-089",
+    "Maker": "MINEBEA"
+  },
+  {
+    "Machine_No": "AG-07",
+    "Serial_No": 200701002,
+    "Model": "869-DEE-089",
+    "Maker": "MINEBEA"
+  },
+  {
+    "Machine_No": "AG-08",
+    "Serial_No": 200701003,
+    "Model": "869-DEE-089",
+    "Maker": "MINEBEA"
+  },
+  {
+    "Machine_No": "AG-09",
+    "Serial_No": 201201010,
+    "Model": "889",
+    "Maker": "MINEBEA"
+  },
+  {
+    "Machine_No": "AG-10",
+    "Serial_No": 200611007,
+    "Model": "889-DEE-103",
+    "Maker": "MINEBEA"
+  },
+  {
+    "Machine_No": "AG-11",
+    "Serial_No": 200603006,
+    "Model": "889-DEE-103",
+    "Maker": "MINEBEA"
+  },
+  {
+    "Machine_No": "AG-12",
+    "Serial_No": 200507001,
+    "Model": "889-DEE-103",
+    "Maker": "MINEBEA"
+  },
+  {
+    "Machine_No": "AG-13",
+    "Serial_No": 200507002,
+    "Model": "889-DEE-103",
+    "Maker": "MINEBEA"
+  },
+  {
+    "Machine_No": "ALS-01",
+    "Serial_No": "",
+    "Model": "",
+    "Maker": "SINFONIA"
+  },
+  {
+    "Machine_No": "BM-01",
+    "Serial_No": 261,
+    "Model": "BM16 (B)",
+    "Maker": "TSUGAMI"
+  },
+  {
+    "Machine_No": "BM-02",
+    "Serial_No": 260,
+    "Model": "BM16 (B)",
+    "Maker": "TSUGAMI"
+  },
+  {
+    "Machine_No": "BM-03",
+    "Serial_No": 5278,
+    "Model": "B012C-V",
+    "Maker": "TSUGAMI"
+  },
+  {
+    "Machine_No": "CH-01",
+    "Serial_No": "10188A",
+    "Model": "CH154(X)",
+    "Maker": "TSUGAMI"
+  },
+  {
+    "Machine_No": "CH-02",
+    "Serial_No": "10156A",
+    "Model": "CH154S(X)",
+    "Maker": "TSUGAMI"
+  },
+  {
+    "Machine_No": "CH-03",
+    "Serial_No": "101",
+    "Model": "CH154(X)",
+    "Maker": "TSUGAMI"
+  },
+  {
+    "Machine_No": "CH-04",
+    "Serial_No": "103",
+    "Model": "CH154(X)",
+    "Maker": "TSUGAMI"
+  },
+  {
+    "Machine_No": "CH-05",
+    "Serial_No": "118",
+    "Model": "CH154(X)",
+    "Maker": "TSUGAMI"
+  },
+  {
+    "Machine_No": "CH-06",
+    "Serial_No": "117",
+    "Model": "CH154(X)",
+    "Maker": "TSUGAMI"
+  },
+  {
+    "Machine_No": "CH-07",
+    "Serial_No": "115",
+    "Model": "CH154(X)",
+    "Maker": "TSUGAMI"
+  },
+  {
+    "Machine_No": "CH-08",
+    "Serial_No": "122",
+    "Model": "CH154(X)",
+    "Maker": "TSUGAMI"
+  },
+  {
+    "Machine_No": "CH-09",
+    "Serial_No": "10202A",
+    "Model": "CH154(X)",
+    "Maker": "TSUGAMI"
+  },
+  {
+    "Machine_No": "CH-10",
+    "Serial_No": "10200A",
+    "Model": "CH154(X)",
+    "Maker": "TSUGAMI"
+  },
+  {
+    "Machine_No": "CH-11",
+    "Serial_No": "10197A",
+    "Model": "CH154(X)",
+    "Maker": "TSUGAMI"
+  },
+  {
+    "Machine_No": "CH-12",
+    "Serial_No": "10186A",
+    "Model": "CH154(X)",
+    "Maker": "TSUGAMI"
+  },
+  {
+    "Machine_No": "CH-13",
+    "Serial_No": "10155A",
+    "Model": "CH154S(X)",
+    "Maker": "TSUGAMI"
+  },
+  {
+    "Machine_No": "CH-14",
+    "Serial_No": "105",
+    "Model": "CH154(X)",
+    "Maker": "TSUGAMI"
+  },
+  {
+    "Machine_No": "CH-15",
+    "Serial_No": "104",
+    "Model": "CH154(X)",
+    "Maker": "TSUGAMI"
+  },
+  {
+    "Machine_No": "CH-16",
+    "Serial_No": "121",
+    "Model": "CH154(X)",
+    "Maker": "TSUGAMI"
+  },
+  {
+    "Machine_No": "CH-17",
+    "Serial_No": "123",
+    "Model": "CH154(X)",
+    "Maker": "TSUGAMI"
+  },
+  {
+    "Machine_No": "CH-18",
+    "Serial_No": "119",
+    "Model": "CH154(X)",
+    "Maker": "TSUGAMI"
+  },
+  {
+    "Machine_No": "CH-19",
+    "Serial_No": "126",
+    "Model": "CH154(X)",
+    "Maker": "TSUGAMI"
+  },
+  {
+    "Machine_No": "CH-20",
+    "Serial_No": "10204A",
+    "Model": "CH154(X)",
+    "Maker": "TSUGAMI"
+  },
+  {
+    "Machine_No": "CH-21",
+    "Serial_No": "10201A",
+    "Model": "CH154(X)",
+    "Maker": "TSUGAMI"
+  },
+  {
+    "Machine_No": "CH-22",
+    "Serial_No": "10194A",
+    "Model": "CH154(X)",
+    "Maker": "TSUGAMI"
+  },
+  {
+    "Machine_No": "CH-23",
+    "Serial_No": "10196A",
+    "Model": "CH154(X)",
+    "Maker": "TSUGAMI"
+  },
+  {
+    "Machine_No": "CH-24",
+    "Serial_No": "10187A",
+    "Model": "CH154(X)",
+    "Maker": "TSUGAMI"
+  },
+  {
+    "Machine_No": "CH-25",
+    "Serial_No": "10185A",
+    "Model": "CH154(X)",
+    "Maker": "TSUGAMI"
+  },
+  {
+    "Machine_No": "CH-26",
+    "Serial_No": "102",
+    "Model": "CH154(X)",
+    "Maker": "TSUGAMI"
+  },
+  {
+    "Machine_No": "CH-27",
+    "Serial_No": "106",
+    "Model": "CH154(X)",
+    "Maker": "TSUGAMI"
+  },
+  {
+    "Machine_No": "CH-28",
+    "Serial_No": "116",
+    "Model": "CH154(X)",
+    "Maker": "TSUGAMI"
+  },
+  {
+    "Machine_No": "CH-29",
+    "Serial_No": "114",
+    "Model": "CH154(X)",
+    "Maker": "TSUGAMI"
+  },
+  {
+    "Machine_No": "CH-30",
+    "Serial_No": "127",
+    "Model": "CH154(X)",
+    "Maker": "TSUGAMI"
+  },
+  {
+    "Machine_No": "CH-31",
+    "Serial_No": "124",
+    "Model": "CH154(X)",
+    "Maker": "TSUGAMI"
+  },
+  {
+    "Machine_No": "CH-32",
+    "Serial_No": "10203A",
+    "Model": "CH154(X)",
+    "Maker": "TSUGAMI"
+  },
+  {
+    "Machine_No": "CH-33",
+    "Serial_No": "10198A",
+    "Model": "CH154(X)",
+    "Maker": "TSUGAMI"
+  },
+  {
+    "Machine_No": "CH-34",
+    "Serial_No": "10192A",
+    "Model": "CH154(X)",
+    "Maker": "TSUGAMI"
+  },
+  {
+    "Machine_No": "CH-35",
+    "Serial_No": "108",
+    "Model": "CH154(X)",
+    "Maker": "TSUGAMI"
+  },
+  {
+    "Machine_No": "CH-36",
+    "Serial_No": "10195A",
+    "Model": "CH154(X)",
+    "Maker": "TSUGAMI"
+  },
+  {
+    "Machine_No": "CH-37",
+    "Serial_No": "10189A",
+    "Model": "CH154(X)",
+    "Maker": "TSUGAMI"
+  },
+  {
+    "Machine_No": "CH-38",
+    "Serial_No": 120,
+    "Model": "CH154(X)",
+    "Maker": "TSUGAMI"
+  },
+  {
+    "Machine_No": "CH-39",
+    "Serial_No": "110",
+    "Model": "CH154(X)",
+    "Maker": "TSUGAMI"
+  },
+  {
+    "Machine_No": "CH-40",
+    "Serial_No": "109",
+    "Model": "CH154(X)",
+    "Maker": "TSUGAMI"
+  },
+  {
+    "Machine_No": "CH-41",
+    "Serial_No": "113",
+    "Model": "CH154(X)",
+    "Maker": "TSUGAMI"
+  },
+  {
+    "Machine_No": "CH-42",
+    "Serial_No": "112",
+    "Model": "CH154(X)",
+    "Maker": "TSUGAMI"
+  },
+  {
+    "Machine_No": "CH-43",
+    "Serial_No": "111",
+    "Model": "CH154(X)",
+    "Maker": "TSUGAMI"
+  },
+  {
+    "Machine_No": "CH-44",
+    "Serial_No": "128",
+    "Model": "CH154(X)",
+    "Maker": "TSUGAMI"
+  },
+  {
+    "Machine_No": "CH-45",
+    "Serial_No": "125",
+    "Model": "CH154(X)",
+    "Maker": "TSUGAMI"
+  },
+  {
+    "Machine_No": "CH-46",
+    "Serial_No": "10199A",
+    "Model": "CH154(X)",
+    "Maker": "TSUGAMI"
+  },
+  {
+    "Machine_No": "CH-47",
+    "Serial_No": "10193A",
+    "Model": "CH154(X)",
+    "Maker": "TSUGAMI"
+  },
+  {
+    "Machine_No": "CH-48",
+    "Serial_No": "10190A",
+    "Model": "CH154(X)",
+    "Maker": "TSUGAMI"
+  },
+  {
+    "Machine_No": "CH-49",
+    "Serial_No": "107",
+    "Model": "CH154(X)",
+    "Maker": "TSUGAMI"
+  },
+  {
+    "Machine_No": "CP-03",
+    "Serial_No": "11000216",
+    "Model": "CCP-100H",
+    "Maker": "NACHI"
+  },
+  {
+    "Machine_No": "CP-04",
+    "Serial_No": "02030031",
+    "Model": "SCP103H",
+    "Maker": "AMADA"
+  },
+  {
+    "Machine_No": "CP-05",
+    "Serial_No": 11030070,
+    "Model": "CCP-103H",
+    "Maker": "NACHI"
+  },
+  {
+    "Machine_No": "CS-01",
+    "Serial_No": "420",
+    "Model": "C150(X)",
+    "Maker": "TSUGAMI"
+  },
+  {
+    "Machine_No": "CS-02",
+    "Serial_No": "448",
+    "Model": "C150(X)",
+    "Maker": "TSUGAMI"
+  },
+  {
+    "Machine_No": "CS-03",
+    "Serial_No": "435",
+    "Model": "C150(X)",
+    "Maker": "TSUGAMI"
+  },
+  {
+    "Machine_No": "CS-04",
+    "Serial_No": "434",
+    "Model": "C150(X)",
+    "Maker": "TSUGAMI"
+  },
+  {
+    "Machine_No": "CS-05",
+    "Serial_No": "551",
+    "Model": "C150(X)",
+    "Maker": "TSUGAMI"
+  },
+  {
+    "Machine_No": "CS-06",
+    "Serial_No": "437",
+    "Model": "C150(X)",
+    "Maker": "TSUGAMI"
+  },
+  {
+    "Machine_No": "CS-07",
+    "Serial_No": "418",
+    "Model": "C150(X)",
+    "Maker": "TSUGAMI"
+  },
+  {
+    "Machine_No": "CS-08",
+    "Serial_No": "416",
+    "Model": "C150(X)",
+    "Maker": "TSUGAMI"
+  },
+  {
+    "Machine_No": "CS-09",
+    "Serial_No": "415",
+    "Model": "C150(X)",
+    "Maker": "TSUGAMI"
+  },
+  {
+    "Machine_No": "CS-10",
+    "Serial_No": "552",
+    "Model": "C150(X)",
+    "Maker": "TSUGAMI"
+  },
+  {
+    "Machine_No": "CS-11",
+    "Serial_No": "433",
+    "Model": "C150(X)",
+    "Maker": "TSUGAMI"
+  },
+  {
+    "Machine_No": "CS-12",
+    "Serial_No": "432",
+    "Model": "C150(X)",
+    "Maker": "TSUGAMI"
+  },
+  {
+    "Machine_No": "CS-13",
+    "Serial_No": "444",
+    "Model": "C150(X)",
+    "Maker": "TSUGAMI"
+  },
+  {
+    "Machine_No": "CS-14",
+    "Serial_No": "443",
+    "Model": "C150(X)",
+    "Maker": "TSUGAMI"
+  },
+  {
+    "Machine_No": "CS-15",
+    "Serial_No": "419",
+    "Model": "C150(X)",
+    "Maker": "TSUGAMI"
+  },
+  {
+    "Machine_No": "CS-16",
+    "Serial_No": "438",
+    "Model": "C150(X)",
+    "Maker": "TSUGAMI"
+  },
+  {
+    "Machine_No": "CS-17",
+    "Serial_No": "446",
+    "Model": "C150(X)",
+    "Maker": "TSUGAMI"
+  },
+  {
+    "Machine_No": "CS-18",
+    "Serial_No": "560",
+    "Model": "C150(X)",
+    "Maker": "TSUGAMI"
+  },
+  {
+    "Machine_No": "CS-19",
+    "Serial_No": "450",
+    "Model": "C150(X)",
+    "Maker": "TSUGAMI"
+  },
+  {
+    "Machine_No": "CS-20",
+    "Serial_No": "557",
+    "Model": "C150(X)",
+    "Maker": "TSUGAMI"
+  },
+  {
+    "Machine_No": "CS-21",
+    "Serial_No": "556",
+    "Model": "C150(X)",
+    "Maker": "TSUGAMI"
+  },
+  {
+    "Machine_No": "CS-22",
+    "Serial_No": "436",
+    "Model": "C150(X)",
+    "Maker": "TSUGAMI"
+  },
+  {
+    "Machine_No": "CS-23",
+    "Serial_No": "441",
+    "Model": "C150(X)",
+    "Maker": "TSUGAMI"
+  },
+  {
+    "Machine_No": "CS-24",
+    "Serial_No": "442",
+    "Model": "C150(X)",
+    "Maker": "TSUGAMI"
+  },
+  {
+    "Machine_No": "CS-25",
+    "Serial_No": "447",
+    "Model": "C150(X)",
+    "Maker": "TSUGAMI"
+  },
+  {
+    "Machine_No": "CS-26",
+    "Serial_No": "555",
+    "Model": "C150(X)",
+    "Maker": "TSUGAMI"
+  },
+  {
+    "Machine_No": "CS-27",
+    "Serial_No": "558",
+    "Model": "C150(X)",
+    "Maker": "TSUGAMI"
+  },
+  {
+    "Machine_No": "CS-28",
+    "Serial_No": "559",
+    "Model": "C150(X)",
+    "Maker": "TSUGAMI"
+  },
+  {
+    "Machine_No": "CS-29",
+    "Serial_No": "429",
+    "Model": "C150(X)",
+    "Maker": "TSUGAMI"
+  },
+  {
+    "Machine_No": "CS-30",
+    "Serial_No": "428",
+    "Model": "C150(X)",
+    "Maker": "TSUGAMI"
+  },
+  {
+    "Machine_No": "CS-31",
+    "Serial_No": "422",
+    "Model": "C150(X)",
+    "Maker": "TSUGAMI"
+  },
+  {
+    "Machine_No": "CS-32",
+    "Serial_No": "412",
+    "Model": "C150(X)",
+    "Maker": "TSUGAMI"
+  },
+  {
+    "Machine_No": "CS-33",
+    "Serial_No": "413",
+    "Model": "C150(X)",
+    "Maker": "TSUGAMI"
+  },
+  {
+    "Machine_No": "CS-34",
+    "Serial_No": "427",
+    "Model": "C150(X)",
+    "Maker": "TSUGAMI"
+  },
+  {
+    "Machine_No": "CS-35",
+    "Serial_No": "430",
+    "Model": "C150(X)",
+    "Maker": "TSUGAMI"
+  },
+  {
+    "Machine_No": "CS-36",
+    "Serial_No": "439",
+    "Model": "C150(X)",
+    "Maker": "TSUGAMI"
+  },
+  {
+    "Machine_No": "CS-37",
+    "Serial_No": "553",
+    "Model": "C150(X)",
+    "Maker": "TSUGAMI"
+  },
+  {
+    "Machine_No": "CS-38",
+    "Serial_No": "449",
+    "Model": "C150(X)",
+    "Maker": "TSUGAMI"
+  },
+  {
+    "Machine_No": "CS-39",
+    "Serial_No": "423",
+    "Model": "C150(X)",
+    "Maker": "TSUGAMI"
+  },
+  {
+    "Machine_No": "CS-40",
+    "Serial_No": "440",
+    "Model": "C150(X)",
+    "Maker": "TSUGAMI"
+  },
+  {
+    "Machine_No": "CS-41",
+    "Serial_No": "554",
+    "Model": "C150(X)",
+    "Maker": "TSUGAMI"
+  },
+  {
+    "Machine_No": "CS-42",
+    "Serial_No": "414",
+    "Model": "C150(X)",
+    "Maker": "TSUGAMI"
+  },
+  {
+    "Machine_No": "CS-43",
+    "Serial_No": "411",
+    "Model": "C150(X)",
+    "Maker": "TSUGAMI"
+  },
+  {
+    "Machine_No": "CS-44",
+    "Serial_No": "421",
+    "Model": "C150(X)",
+    "Maker": "TSUGAMI"
+  },
+  {
+    "Machine_No": "CS-45",
+    "Serial_No": "425",
+    "Model": "C150(X)",
+    "Maker": "TSUGAMI"
+  },
+  {
+    "Machine_No": "CS-46",
+    "Serial_No": "424",
+    "Model": "C150(X)",
+    "Maker": "TSUGAMI"
+  },
+  {
+    "Machine_No": "CS-47",
+    "Serial_No": "426",
+    "Model": "C150(X)",
+    "Maker": "TSUGAMI"
+  },
+  {
+    "Machine_No": "CS-48",
+    "Serial_No": "417",
+    "Model": "C150(X)",
+    "Maker": "TSUGAMI"
+  },
+  {
+    "Machine_No": "CS-49",
+    "Serial_No": "445",
+    "Model": "C150(X)",
+    "Maker": "TSUGAMI"
+  },
+  {
+    "Machine_No": "CS-50",
+    "Serial_No": 431,
+    "Model": "C150(X)",
+    "Maker": "TSUGAMI"
+  },
+  {
+    "Machine_No": "CS-51",
+    "Serial_No": "11025A",
+    "Model": "C150(X)",
+    "Maker": "TSUGAMI"
+  },
+  {
+    "Machine_No": "CS-52",
+    "Serial_No": "11019A",
+    "Model": "C150(X)",
+    "Maker": "TSUGAMI"
+  },
+  {
+    "Machine_No": "CS-53",
+    "Serial_No": "11021A",
+    "Model": "C150(X)",
+    "Maker": "TSUGAMI"
+  },
+  {
+    "Machine_No": "CS-54",
+    "Serial_No": "11015A",
+    "Model": "C150(X)",
+    "Maker": "TSUGAMI"
+  },
+  {
+    "Machine_No": "CS-55",
+    "Serial_No": "11016A",
+    "Model": "C150(X)",
+    "Maker": "TSUGAMI"
+  },
+  {
+    "Machine_No": "CS-56",
+    "Serial_No": "11024A",
+    "Model": "C150(X)",
+    "Maker": "TSUGAMI"
+  },
+  {
+    "Machine_No": "CS-57",
+    "Serial_No": "11018A",
+    "Model": "C150(X)",
+    "Maker": "TSUGAMI"
+  },
+  {
+    "Machine_No": "CS-58",
+    "Serial_No": "11020A",
+    "Model": "C150(X)",
+    "Maker": "TSUGAMI"
+  },
+  {
+    "Machine_No": "CS-59",
+    "Serial_No": "11014A",
+    "Model": "C150(X)",
+    "Maker": "TSUGAMI"
+  },
+  {
+    "Machine_No": "CS-60",
+    "Serial_No": "11017A",
+    "Model": "C150(X)",
+    "Maker": "TSUGAMI"
+  },
+  {
+    "Machine_No": "CS-61",
+    "Serial_No": "11022A",
+    "Model": "C150(X)",
+    "Maker": "TSUGAMI"
+  },
+  {
+    "Machine_No": "CS-62",
+    "Serial_No": "11023A",
+    "Model": "C150(X)",
+    "Maker": "TSUGAMI"
+  },
+  {
+    "Machine_No": "CT-01",
+    "Serial_No": "",
+    "Model": "",
+    "Maker": "MACHINE SHOP 2"
+  },
+  {
+    "Machine_No": "CT-02",
+    "Serial_No": "",
+    "Model": "",
+    "Maker": "MACHINE SHOP 2"
+  },
+  {
+    "Machine_No": "GS-10",
+    "Serial_No": "113",
+    "Model": "",
+    "Maker": "TECNO WASINO"
+  },
+  {
+    "Machine_No": "OV-02",
+    "Serial_No": "0202077-2",
+    "Model": "PH-101M",
+    "Maker": "ESPEC CORP"
+  },
+  {
+    "Machine_No": "OV-03",
+    "Serial_No": "252002313",
+    "Model": "PVC-231L",
+    "Maker": "ESPEC CORP"
+  },
+  {
+    "Machine_No": "OV-04",
+    "Serial_No": "320001169",
+    "Model": "VAC-300PR",
+    "Maker": "ESPEC CORP"
+  },
+  {
+    "Machine_No": "PA-01",
+    "Serial_No": "575-1",
+    "Model": "P/N575",
+    "Maker": "MACHINE SHOP 2"
+  },
+  {
+    "Machine_No": "PA-02",
+    "Serial_No": "2020AA-020",
+    "Model": "PCMB-PA(A)",
+    "Maker": "MACHINE SHOP 2"
+  },
+  {
+    "Machine_No": "PS-01",
+    "Serial_No": "2020BS-016",
+    "Model": "PCMB-PS(B)",
+    "Maker": "MACHINE SHOP 2"
+  },
+  {
+    "Machine_No": "PS-02",
+    "Serial_No": "2020BS-017",
+    "Model": "PCMB-PS(B)",
+    "Maker": "MACHINE SHOP 2"
+  },
+  {
+    "Machine_No": "PS-03",
+    "Serial_No": "2020BS-018",
+    "Model": "PCMB-PS(B)",
+    "Maker": "MACHINE SHOP 2"
+  },
+  {
+    "Machine_No": "PS-04",
+    "Serial_No": "2020BS-019",
+    "Model": "PCMB-PS(B)",
+    "Maker": "MACHINE SHOP 2"
+  },
+  {
+    "Machine_No": "PS-05",
+    "Serial_No": "2019BA-015",
+    "Model": "PCMB-PS(A)",
+    "Maker": "MACHINE SHOP 2"
+  },
+  {
+    "Machine_No": "PSA-01",
+    "Serial_No": "2017AA-001",
+    "Model": "PCMB-PSA(A)",
+    "Maker": "MACHINE SHOP 2"
+  },
+  {
+    "Machine_No": "PSA-02",
+    "Serial_No": "2017AB-002",
+    "Model": "PCMB-PSA(A)",
+    "Maker": "MACHINE SHOP 2"
+  },
+  {
+    "Machine_No": "PSA-03",
+    "Serial_No": "2020AC-003",
+    "Model": "PCMB-PSA(A)",
+    "Maker": "MACHINE SHOP 2"
+  },
+  {
+    "Machine_No": "PSA-04",
+    "Serial_No": "2020AC-004",
+    "Model": "PCMB-PSA(A)",
+    "Maker": "MACHINE SHOP 2"
+  },
+  {
+    "Machine_No": "PSA-05",
+    "Serial_No": "2021BD-031",
+    "Model": "PCMB-PSA(B)",
+    "Maker": "MACHINE SHOP 2"
+  },
+  {
+    "Machine_No": "PSA-06",
+    "Serial_No": "2021BD-032",
+    "Model": "PCMB-PSA(B)",
+    "Maker": "MACHINE SHOP 2"
+  },
+  {
+    "Machine_No": "SB-55",
+    "Serial_No": 238,
+    "Model": "SUB-MICRON",
+    "Maker": "TECNO WASINO"
+  },
+  {
+    "Machine_No": "SB-56",
+    "Serial_No": 240,
+    "Model": "SUB-MICRON",
+    "Maker": "TECNO WASINO"
+  },
+  {
+    "Machine_No": "SB-57",
+    "Serial_No": 252,
+    "Model": "SUB-MICRON",
+    "Maker": "TECNO WASINO"
+  },
+  {
+    "Machine_No": "SB-58",
+    "Serial_No": 267,
+    "Model": "SUB-MICRON",
+    "Maker": "TECNO WASINO"
+  },
+  {
+    "Machine_No": "SB-59",
+    "Serial_No": 205,
+    "Model": "SUB-MICRON",
+    "Maker": "TECNO WASINO"
+  },
+  {
+    "Machine_No": "SB-60",
+    "Serial_No": 233,
+    "Model": "SUB-MICRON",
+    "Maker": "TECNO WASINO"
+  },
+  {
+    "Machine_No": "SB-61",
+    "Serial_No": 272,
+    "Model": "SUB-MICRON",
+    "Maker": "TECNO WASINO"
+  },
+  {
+    "Machine_No": "SB-62",
+    "Serial_No": 216,
+    "Model": "SUB-MICRON",
+    "Maker": "TECNO WASINO"
+  },
+  {
+    "Machine_No": "SB-63",
+    "Serial_No": 254,
+    "Model": "SUB-MICRON",
+    "Maker": "TECNO WASINO"
+  },
+  {
+    "Machine_No": "SB-64",
+    "Serial_No": 201,
+    "Model": "SUB-MICRON",
+    "Maker": "TECNO WASINO"
+  },
+  {
+    "Machine_No": "SB-65",
+    "Serial_No": 181,
+    "Model": "SUB-MICRON",
+    "Maker": "TECNO WASINO"
+  },
+  {
+    "Machine_No": "SB-66",
+    "Serial_No": 231,
+    "Model": "SUB-MICRON",
+    "Maker": "TECNO WASINO"
+  },
+  {
+    "Machine_No": "SB-67",
+    "Serial_No": 269,
+    "Model": "SUB-MICRON",
+    "Maker": "TECNO WASINO"
+  },
+  {
+    "Machine_No": "SB-68",
+    "Serial_No": 251,
+    "Model": "SUB-MICRON",
+    "Maker": "TECNO WASINO"
+  },
+  {
+    "Machine_No": "SB-69",
+    "Serial_No": 248,
+    "Model": "SUB-MICRON",
+    "Maker": "TECNO WASINO"
+  },
+  {
+    "Machine_No": "SB-70",
+    "Serial_No": 211,
+    "Model": "SUB-MICRON",
+    "Maker": "TECNO WASINO"
+  },
+  {
+    "Machine_No": "SB-71",
+    "Serial_No": 256,
+    "Model": "SUB-MICRON",
+    "Maker": "TECNO WASINO"
+  },
+  {
+    "Machine_No": "SB-72",
+    "Serial_No": 195,
+    "Model": "SUB-MICRON",
+    "Maker": "TECNO WASINO"
+  },
+  {
+    "Machine_No": "SB-73",
+    "Serial_No": 234,
+    "Model": "SUB-MICRON",
+    "Maker": "TECNO WASINO"
+  },
+  {
+    "Machine_No": "SB-74",
+    "Serial_No": 176,
+    "Model": "SUB-MICRON",
+    "Maker": "TECNO WASINO"
+  },
+  {
+    "Machine_No": "SB-75",
+    "Serial_No": 199,
+    "Model": "SUB-MICRON",
+    "Maker": "TECNO WASINO"
+  },
+  {
+    "Machine_No": "SB-76",
+    "Serial_No": 186,
+    "Model": "SUB-MICRON",
+    "Maker": "TECNO WASINO"
+  },
+  {
+    "Machine_No": "SB-77",
+    "Serial_No": 265,
+    "Model": "SUB-MICRON",
+    "Maker": "TECNO WASINO"
+  },
+  {
+    "Machine_No": "SB-78",
+    "Serial_No": 262,
+    "Model": "SUB-MICRON",
+    "Maker": "TECNO WASINO"
+  },
+  {
+    "Machine_No": "SB-79",
+    "Serial_No": 275,
+    "Model": "SUB-MICRON",
+    "Maker": "TECNO WASINO"
+  },
+  {
+    "Machine_No": "SDH-01",
+    "Serial_No": "1010002",
+    "Model": "KS-IP-3",
+    "Maker": "MINEBEA"
+  },
+  {
+    "Machine_No": "SDH-02",
+    "Serial_No": "1002001",
+    "Model": "KS-IP-3",
+    "Maker": "MINEBEA"
+  },
+  {
+    "Machine_No": "SDH-03",
+    "Serial_No": "1806003",
+    "Model": "KS-IP-3",
+    "Maker": "MINEBEA"
+  },
+  {
+    "Machine_No": "SDH-04",
+    "Serial_No": "1912004",
+    "Model": "KS-IP-3",
+    "Maker": "MINEBEA"
+  },
+  {
+    "Machine_No": "SW-03",
+    "Serial_No": "0804005",
+    "Model": "KS-CS-1",
+    "Maker": "MINEBEA"
+  },
+  {
+    "Machine_No": "SN-17",
+    "Serial_No": "121",
+    "Model": "N-10",
+    "Maker": "TECNO WASINO"
+  },
+  {
+    "Machine_No": "ST-01",
+    "Serial_No": "0806005",
+    "Model": "KS-MC-1",
+    "Maker": "MINEBEA"
+  },
+  {
+    "Machine_No": "ST-02",
+    "Serial_No": "0804003",
+    "Model": "KS-MC-1",
+    "Maker": "MINEBEA"
+  },
+  {
+    "Machine_No": "ST-03",
+    "Serial_No": "0709001",
+    "Model": "KS-MC-1",
+    "Maker": "MINEBEA"
+  },
+  {
+    "Machine_No": "TB-01",
+    "Serial_No": "Z13916",
+    "Model": "B12-2F6",
+    "Maker": "CITIZEN"
+  },
+  {
+    "Machine_No": "TB-02",
+    "Serial_No": "Z13924",
+    "Model": "B12-2F6",
+    "Maker": "CITIZEN"
+  },
+  {
+    "Machine_No": "TB-03",
+    "Serial_No": "Z13254",
+    "Model": "B12-2F6",
+    "Maker": "CITIZEN"
+  },
+  {
+    "Machine_No": "TB-04",
+    "Serial_No": "Z13814",
+    "Model": "B12-2F5",
+    "Maker": "CITIZEN"
+  },
+  {
+    "Machine_No": "TB-05",
+    "Serial_No": "Z13253",
+    "Model": "B12-2F6",
+    "Maker": "CITIZEN"
+  },
+  {
+    "Machine_No": "TB-06",
+    "Serial_No": "Z13256",
+    "Model": "B12-2F6",
+    "Maker": "CITIZEN"
+  },
+  {
+    "Machine_No": "TB-07",
+    "Serial_No": "Z13257",
+    "Model": "B12-2F6",
+    "Maker": "CITIZEN"
+  },
+  {
+    "Machine_No": "TB-08",
+    "Serial_No": "Z13426",
+    "Model": "B12-2F5",
+    "Maker": "CITIZEN"
+  },
+  {
+    "Machine_No": "TB-09",
+    "Serial_No": "Z13422",
+    "Model": "B12-2F5",
+    "Maker": "CITIZEN"
+  },
+  {
+    "Machine_No": "TB-10",
+    "Serial_No": "Z13423",
+    "Model": "B12-2F5",
+    "Maker": "CITIZEN"
+  },
+  {
+    "Machine_No": "TB-11",
+    "Serial_No": "Z13809",
+    "Model": "B12-2F5",
+    "Maker": "CITIZEN"
+  },
+  {
+    "Machine_No": "TB-12",
+    "Serial_No": "Z13815",
+    "Model": "B12-2F5",
+    "Maker": "CITIZEN"
+  },
+  {
+    "Machine_No": "TB-13",
+    "Serial_No": "Z13810",
+    "Model": "B12-2F5",
+    "Maker": "CITIZEN"
+  },
+  {
+    "Machine_No": "TB-14",
+    "Serial_No": "Z13808",
+    "Model": "B12-2F5",
+    "Maker": "CITIZEN"
+  },
+  {
+    "Machine_No": "TB-15",
+    "Serial_No": "Z13813",
+    "Model": "B12-2F5",
+    "Maker": "CITIZEN"
+  },
+  {
+    "Machine_No": "TB-16",
+    "Serial_No": "Z5198",
+    "Model": "B12-2F6",
+    "Maker": "CITIZEN"
+  },
+  {
+    "Machine_No": "TB-17",
+    "Serial_No": "Z5172",
+    "Model": "B12-2F6",
+    "Maker": "CITIZEN"
+  },
+  {
+    "Machine_No": "TB-18",
+    "Serial_No": "Z13923",
+    "Model": "B12-2F6",
+    "Maker": "CITIZEN"
+  },
+  {
+    "Machine_No": "TB-19",
+    "Serial_No": "Z13922",
+    "Model": "B12-2F6",
+    "Maker": "CITIZEN"
+  },
+  {
+    "Machine_No": "TB-20",
+    "Serial_No": "Z13919",
+    "Model": "B12-2F6",
+    "Maker": "CITIZEN"
+  },
+  {
+    "Machine_No": "TB-21",
+    "Serial_No": "Z13917",
+    "Model": "B12-2F6",
+    "Maker": "CITIZEN"
+  },
+  {
+    "Machine_No": "TB-22",
+    "Serial_No": "Z13920",
+    "Model": "B12-2F6",
+    "Maker": "CITIZEN"
+  },
+  {
+    "Machine_No": "TB-23",
+    "Serial_No": "Z13918",
+    "Model": "B12-2F6",
+    "Maker": "CITIZEN"
+  },
+  {
+    "Machine_No": "TB-24",
+    "Serial_No": "Z13921",
+    "Model": "B12-2F6",
+    "Maker": "CITIZEN"
+  },
+  {
+    "Machine_No": "TB-25",
+    "Serial_No": "Z13255",
+    "Model": "B12-2F6",
+    "Maker": "CITIZEN"
+  },
+  {
+    "Machine_No": "TB-26",
+    "Serial_No": "Z13425",
+    "Model": "B12-2F5",
+    "Maker": "CITIZEN"
+  },
+  {
+    "Machine_No": "TB-27",
+    "Serial_No": "Z13424",
+    "Model": "B12-2F5",
+    "Maker": "CITIZEN"
+  },
+  {
+    "Machine_No": "TB-28",
+    "Serial_No": "Z13812",
+    "Model": "B12-2F5",
+    "Maker": "CITIZEN"
+  },
+  {
+    "Machine_No": "TB-29",
+    "Serial_No": "Z13816",
+    "Model": "B12-2F5",
+    "Maker": "CITIZEN"
+  },
+  {
+    "Machine_No": "TB-30",
+    "Serial_No": "Z13807",
+    "Model": "B12-2F5",
+    "Maker": "CITIZEN"
+  },
+  {
+    "Machine_No": "TB-31",
+    "Serial_No": "Z13811",
+    "Model": "B12-2F5",
+    "Maker": "CITIZEN"
+  },
+  {
+    "Machine_No": "TB-32",
+    "Serial_No": "Z13915",
+    "Model": "B12-2F6",
+    "Maker": "CITIZEN"
+  },
+  {
+    "Machine_No": "TB-33",
+    "Serial_No": "Z5196",
+    "Model": "B12-2F6",
+    "Maker": "CITIZEN"
+  },
+  {
+    "Machine_No": "TB-34",
+    "Serial_No": "Z5194",
+    "Model": "B12-2F6",
+    "Maker": "CITIZEN"
+  },
+  {
+    "Machine_No": "TBM-21",
+    "Serial_No": "918",
+    "Model": "BM165",
+    "Maker": "TSUGAMI"
+  },
+  {
+    "Machine_No": "TBM-22",
+    "Serial_No": "952",
+    "Model": "BM165",
+    "Maker": "TSUGAMI"
+  },
+  {
+    "Machine_No": "TBM-23",
+    "Serial_No": "953",
+    "Model": "BM165",
+    "Maker": "TSUGAMI"
+  },
+  {
+    "Machine_No": "TBM-24",
+    "Serial_No": "959",
+    "Model": "BM165",
+    "Maker": "TSUGAMI"
+  },
+  {
+    "Machine_No": "TBM-25",
+    "Serial_No": "937",
+    "Model": "BM165",
+    "Maker": "TSUGAMI"
+  },
+  {
+    "Machine_No": "TBM-26",
+    "Serial_No": "935",
+    "Model": "BM165",
+    "Maker": "TSUGAMI"
+  },
+  {
+    "Machine_No": "TBM-27",
+    "Serial_No": "969",
+    "Model": "BM165",
+    "Maker": "TSUGAMI"
+  },
+  {
+    "Machine_No": "TBM-28",
+    "Serial_No": "968",
+    "Model": "BM165",
+    "Maker": "TSUGAMI"
+  },
+  {
+    "Machine_No": "TBM-29",
+    "Serial_No": "972",
+    "Model": "BM165",
+    "Maker": "TSUGAMI"
+  },
+  {
+    "Machine_No": "TBM-30",
+    "Serial_No": "980",
+    "Model": "BM165",
+    "Maker": "TSUGAMI"
+  },
+  {
+    "Machine_No": "TBM-31",
+    "Serial_No": "957",
+    "Model": "BM165",
+    "Maker": "TSUGAMI"
+  },
+  {
+    "Machine_No": "TBM-32",
+    "Serial_No": "956",
+    "Model": "BM165",
+    "Maker": "TSUGAMI"
+  },
+  {
+    "Machine_No": "TBM-33",
+    "Serial_No": "961",
+    "Model": "BM165",
+    "Maker": "TSUGAMI"
+  },
+  {
+    "Machine_No": "TBM-34",
+    "Serial_No": "955",
+    "Model": "BM165",
+    "Maker": "TSUGAMI"
+  },
+  {
+    "Machine_No": "TBM-35",
+    "Serial_No": "940",
+    "Model": "BM165",
+    "Maker": "TSUGAMI"
+  },
+  {
+    "Machine_No": "TBM-36",
+    "Serial_No": "924",
+    "Model": "BM165",
+    "Maker": "TSUGAMI"
+  },
+  {
+    "Machine_No": "TBM-37",
+    "Serial_No": "966",
+    "Model": "BM165",
+    "Maker": "TSUGAMI"
+  },
+  {
+    "Machine_No": "TBM-38",
+    "Serial_No": "979",
+    "Model": "BM165",
+    "Maker": "TSUGAMI"
+  },
+  {
+    "Machine_No": "TBM-39",
+    "Serial_No": "976",
+    "Model": "BM165",
+    "Maker": "TSUGAMI"
+  },
+  {
+    "Machine_No": "TBM-40",
+    "Serial_No": "983",
+    "Model": "BM165",
+    "Maker": "TSUGAMI"
+  },
+  {
+    "Machine_No": "TBM-41",
+    "Serial_No": "973",
+    "Model": "BM165",
+    "Maker": "TSUGAMI"
+  },
+  {
+    "Machine_No": "TBM-42",
+    "Serial_No": "958",
+    "Model": "BM165",
+    "Maker": "TSUGAMI"
+  },
+  {
+    "Machine_No": "TBM-43",
+    "Serial_No": "960",
+    "Model": "BM165",
+    "Maker": "TSUGAMI"
+  },
+  {
+    "Machine_No": "TBM-44",
+    "Serial_No": "941",
+    "Model": "BM165",
+    "Maker": "TSUGAMI"
+  },
+  {
+    "Machine_No": "TBM-45",
+    "Serial_No": "925",
+    "Model": "BM165",
+    "Maker": "TSUGAMI"
+  },
+  {
+    "Machine_No": "TBM-46",
+    "Serial_No": "895",
+    "Model": "BM165",
+    "Maker": "TSUGAMI"
+  },
+  {
+    "Machine_No": "TBM-47",
+    "Serial_No": "919",
+    "Model": "BM165",
+    "Maker": "TSUGAMI"
+  },
+  {
+    "Machine_No": "TBM-48",
+    "Serial_No": "970",
+    "Model": "BM165",
+    "Maker": "TSUGAMI"
+  },
+  {
+    "Machine_No": "TBM-49",
+    "Serial_No": "942",
+    "Model": "BM165",
+    "Maker": "TSUGAMI"
+  },
+  {
+    "Machine_No": "TBM-50",
+    "Serial_No": "982",
+    "Model": "BM165",
+    "Maker": "TSUGAMI"
+  },
+  {
+    "Machine_No": "TBM-51",
+    "Serial_No": "917",
+    "Model": "BM165",
+    "Maker": "TSUGAMI"
+  },
+  {
+    "Machine_No": "TBM-52",
+    "Serial_No": "910",
+    "Model": "BM165",
+    "Maker": "TSUGAMI"
+  },
+  {
+    "Machine_No": "TBM-53",
+    "Serial_No": "978",
+    "Model": "BM165",
+    "Maker": "TSUGAMI"
+  },
+  {
+    "Machine_No": "TBM-54",
+    "Serial_No": "954",
+    "Model": "BM165",
+    "Maker": "TSUGAMI"
+  },
+  {
+    "Machine_No": "TBM-55",
+    "Serial_No": "936",
+    "Model": "BM165",
+    "Maker": "TSUGAMI"
+  },
+  {
+    "Machine_No": "TBM-56",
+    "Serial_No": "939",
+    "Model": "BM165",
+    "Maker": "TSUGAMI"
+  },
+  {
+    "Machine_No": "TBM-57",
+    "Serial_No": "906",
+    "Model": "BM165",
+    "Maker": "TSUGAMI"
+  },
+  {
+    "Machine_No": "TBM-58",
+    "Serial_No": "894",
+    "Model": "BM165",
+    "Maker": "TSUGAMI"
+  },
+  {
+    "Machine_No": "TBM-59",
+    "Serial_No": "967",
+    "Model": "BM165",
+    "Maker": "TSUGAMI"
+  },
+  {
+    "Machine_No": "TBM-60",
+    "Serial_No": "971",
+    "Model": "BM165",
+    "Maker": "TSUGAMI"
+  },
+  {
+    "Machine_No": "TBM-61",
+    "Serial_No": "974",
+    "Model": "BM165",
+    "Maker": "TSUGAMI"
+  },
+  {
+    "Machine_No": "TBM-62",
+    "Serial_No": "965",
+    "Model": "BM165",
+    "Maker": "TSUGAMI"
+  },
+  {
+    "Machine_No": "TBM-63",
+    "Serial_No": "916",
+    "Model": "BM165",
+    "Maker": "TSUGAMI"
+  },
+  {
+    "Machine_No": "TBS-01",
+    "Serial_No": "22723A",
+    "Model": "B0206-III",
+    "Maker": "TSUGAMI"
+  },
+  {
+    "Machine_No": "TBS-02",
+    "Serial_No": "22724A",
+    "Model": "B0206-III",
+    "Maker": "TSUGAMI"
+  },
+  {
+    "Machine_No": "TBS-03",
+    "Serial_No": "22725A",
+    "Model": "B0206-III",
+    "Maker": "TSUGAMI"
+  },
+  {
+    "Machine_No": "TBS-04",
+    "Serial_No": "22721A",
+    "Model": "B0206-III",
+    "Maker": "TSUGAMI"
+  },
+  {
+    "Machine_No": "TBS-05",
+    "Serial_No": "22720A",
+    "Model": "B0206-III",
+    "Maker": "TSUGAMI"
+  },
+  {
+    "Machine_No": "TBS-06",
+    "Serial_No": "17019A",
+    "Model": "B0206-III",
+    "Maker": "TSUGAMI"
+  },
+  {
+    "Machine_No": "TBS-07",
+    "Serial_No": "22726A",
+    "Model": "B0206-III",
+    "Maker": "TSUGAMI"
+  },
+  {
+    "Machine_No": "TBS-08",
+    "Serial_No": "22719A",
+    "Model": "B0206-III",
+    "Maker": "TSUGAMI"
+  },
+  {
+    "Machine_No": "TBS-09",
+    "Serial_No": "22664A",
+    "Model": "B0206-III",
+    "Maker": "TSUGAMI"
+  },
+  {
+    "Machine_No": "TBS-10",
+    "Serial_No": "17018A",
+    "Model": "B0206-III",
+    "Maker": "TSUGAMI"
+  },
+  {
+    "Machine_No": "TBS-11",
+    "Serial_No": "22678A",
+    "Model": "B0206-III",
+    "Maker": "TSUGAMI"
+  },
+  {
+    "Machine_No": "TBS-12",
+    "Serial_No": "22676A",
+    "Model": "B0206-III",
+    "Maker": "TSUGAMI"
+  },
+  {
+    "Machine_No": "TBS-13",
+    "Serial_No": "22679A",
+    "Model": "B0206-III",
+    "Maker": "TSUGAMI"
+  },
+  {
+    "Machine_No": "TBS-14",
+    "Serial_No": "22685A",
+    "Model": "B0206-III",
+    "Maker": "TSUGAMI"
+  },
+  {
+    "Machine_No": "TBS-15",
+    "Serial_No": "22686A",
+    "Model": "B0206-III",
+    "Maker": "TSUGAMI"
+  },
+  {
+    "Machine_No": "TBS-16",
+    "Serial_No": "22683A",
+    "Model": "B0206-III",
+    "Maker": "TSUGAMI"
+  },
+  {
+    "Machine_No": "TBS-17",
+    "Serial_No": "22687A",
+    "Model": "B0206-III",
+    "Maker": "TSUGAMI"
+  },
+  {
+    "Machine_No": "TBS-18",
+    "Serial_No": "22718A",
+    "Model": "B0206-III",
+    "Maker": "TSUGAMI"
+  },
+  {
+    "Machine_No": "TBS-19",
+    "Serial_No": "22716A",
+    "Model": "B0206-III",
+    "Maker": "TSUGAMI"
+  },
+  {
+    "Machine_No": "TBS-20",
+    "Serial_No": "22722A",
+    "Model": "B0206-III",
+    "Maker": "TSUGAMI"
+  },
+  {
+    "Machine_No": "TBS-21",
+    "Serial_No": "22666A",
+    "Model": "B0206-III",
+    "Maker": "TSUGAMI"
+  },
+  {
+    "Machine_No": "TBS-22",
+    "Serial_No": "22656A",
+    "Model": "B0206-III",
+    "Maker": "TSUGAMI"
+  },
+  {
+    "Machine_No": "TBS-23",
+    "Serial_No": "22661A",
+    "Model": "B0206-III",
+    "Maker": "TSUGAMI"
+  },
+  {
+    "Machine_No": "TBS-24",
+    "Serial_No": "22677A",
+    "Model": "B0206-III",
+    "Maker": "TSUGAMI"
+  },
+  {
+    "Machine_No": "TBS-25",
+    "Serial_No": "22680A",
+    "Model": "B0206-III",
+    "Maker": "TSUGAMI"
+  },
+  {
+    "Machine_No": "TBS-26",
+    "Serial_No": "22684A",
+    "Model": "B0206-III",
+    "Maker": "TSUGAMI"
+  },
+  {
+    "Machine_No": "TBS-27",
+    "Serial_No": "22682A",
+    "Model": "B0206-III",
+    "Maker": "TSUGAMI"
+  },
+  {
+    "Machine_No": "TBS-28",
+    "Serial_No": "22688A",
+    "Model": "B0206-III",
+    "Maker": "TSUGAMI"
+  },
+  {
+    "Machine_No": "TBS-29",
+    "Serial_No": "22681A",
+    "Model": "B0206-III",
+    "Maker": "TSUGAMI"
+  },
+  {
+    "Machine_No": "TBS-30",
+    "Serial_No": "22717A",
+    "Model": "B0206-III",
+    "Maker": "TSUGAMI"
+  },
+  {
+    "Machine_No": "TBS-31",
+    "Serial_No": "22714A",
+    "Model": "B0206-III",
+    "Maker": "TSUGAMI"
+  },
+  {
+    "Machine_No": "TBS-32",
+    "Serial_No": "22715A",
+    "Model": "B0206-III",
+    "Maker": "TSUGAMI"
+  },
+  {
+    "Machine_No": "TCH-01",
+    "Serial_No": "134",
+    "Model": "CH154(X)",
+    "Maker": "TSUGAMI"
+  },
+  {
+    "Machine_No": "TCH-02",
+    "Serial_No": "133",
+    "Model": "CH154(X)",
+    "Maker": "TSUGAMI"
+  },
+  {
+    "Machine_No": "TCH-03",
+    "Serial_No": "131",
+    "Model": "CH154(X)",
+    "Maker": "TSUGAMI"
+  },
+  {
+    "Machine_No": "TCH-04",
+    "Serial_No": "146",
+    "Model": "CH154(X)",
+    "Maker": "TSUGAMI"
+  },
+  {
+    "Machine_No": "TCH-05",
+    "Serial_No": "144",
+    "Model": "CH154(X)",
+    "Maker": "TSUGAMI"
+  },
+  {
+    "Machine_No": "TCH-06",
+    "Serial_No": "141",
+    "Model": "CH154(X)",
+    "Maker": "TSUGAMI"
+  },
+  {
+    "Machine_No": "TCH-07",
+    "Serial_No": "142",
+    "Model": "CH154(X)",
+    "Maker": "TSUGAMI"
+  },
+  {
+    "Machine_No": "TCH-08",
+    "Serial_No": "132",
+    "Model": "CH154(X)",
+    "Maker": "TSUGAMI"
+  },
+  {
+    "Machine_No": "TCH-09",
+    "Serial_No": "137",
+    "Model": "CH154(X)",
+    "Maker": "TSUGAMI"
+  },
+  {
+    "Machine_No": "TCH-10",
+    "Serial_No": "138",
+    "Model": "CH154(X)",
+    "Maker": "TSUGAMI"
+  },
+  {
+    "Machine_No": "TCH-11",
+    "Serial_No": "148",
+    "Model": "CH154(X)",
+    "Maker": "TSUGAMI"
+  },
+  {
+    "Machine_No": "TCH-12",
+    "Serial_No": "147",
+    "Model": "CH154(X)",
+    "Maker": "TSUGAMI"
+  },
+  {
+    "Machine_No": "TCH-13",
+    "Serial_No": "140",
+    "Model": "CH154(X)",
+    "Maker": "TSUGAMI"
+  },
+  {
+    "Machine_No": "TCH-14",
+    "Serial_No": "145",
+    "Model": "CH154(X)",
+    "Maker": "TSUGAMI"
+  },
+  {
+    "Machine_No": "TCH-15",
+    "Serial_No": "130",
+    "Model": "CH154(X)",
+    "Maker": "TSUGAMI"
+  },
+  {
+    "Machine_No": "TCH-16",
+    "Serial_No": "139",
+    "Model": "CH154(X)",
+    "Maker": "TSUGAMI"
+  },
+  {
+    "Machine_No": "TCH-17",
+    "Serial_No": "136",
+    "Model": "CH154(X)",
+    "Maker": "TSUGAMI"
+  },
+  {
+    "Machine_No": "TCH-18",
+    "Serial_No": "135",
+    "Model": "CH154(X)",
+    "Maker": "TSUGAMI"
+  },
+  {
+    "Machine_No": "TCH-19",
+    "Serial_No": "143",
+    "Model": "CH154(X)",
+    "Maker": "TSUGAMI"
+  },
+  {
+    "Machine_No": "TCH-20",
+    "Serial_No": "129",
+    "Model": "CH154(X)",
+    "Maker": "TSUGAMI"
+  },
+  {
+    "Machine_No": "TLA-01",
+    "Serial_No": 1002,
+    "Model": "TNC-L3-SP",
+    "Maker": "TAKAHASHI"
+  },
+  {
+    "Machine_No": "TLA-02",
+    "Serial_No": "1006",
+    "Model": "TNC-L3-SP",
+    "Maker": "TAKAHASHI"
+  },
+  {
+    "Machine_No": "TLA-03",
+    "Serial_No": 1009,
+    "Model": "TNC-L3-SP",
+    "Maker": "TAKAHASHI"
+  },
+  {
+    "Machine_No": "TLA-04",
+    "Serial_No": "1015",
+    "Model": "TNC-L3-SP",
+    "Maker": "TAKAHASHI"
+  },
+  {
+    "Machine_No": "TLA-05",
+    "Serial_No": 1014,
+    "Model": "TNC-L3-SP",
+    "Maker": "TAKAHASHI"
+  },
+  {
+    "Machine_No": "TLA-06",
+    "Serial_No": 1005,
+    "Model": "TNC-L3-SP",
+    "Maker": "TAKAHASHI"
+  },
+  {
+    "Machine_No": "TLA-07",
+    "Serial_No": "1001",
+    "Model": "TNC-L3-SP",
+    "Maker": "TAKAHASHI"
+  },
+  {
+    "Machine_No": "TLA-08",
+    "Serial_No": "1008",
+    "Model": "TNC-L3-SP",
+    "Maker": "TAKAHASHI"
+  },
+  {
+    "Machine_No": "TLA-09",
+    "Serial_No": "1004",
+    "Model": "TNC-L3-SP",
+    "Maker": "TAKAHASHI"
+  },
+  {
+    "Machine_No": "TLA-10",
+    "Serial_No": "1007",
+    "Model": "TNC-L3-SP",
+    "Maker": "TAKAHASHI"
+  },
+  {
+    "Machine_No": "TLA-11",
+    "Serial_No": 1011,
+    "Model": "TNC-L3-SP",
+    "Maker": "TAKAHASHI"
+  },
+  {
+    "Machine_No": "TLB-01",
+    "Serial_No": "1066",
+    "Model": "TNC-L03-SP",
+    "Maker": "TAKAHASHI"
+  },
+  {
+    "Machine_No": "TLB-02",
+    "Serial_No": "1062",
+    "Model": "TNC-L03-SP",
+    "Maker": "TAKAHASHI"
+  },
+  {
+    "Machine_No": "TLB-03",
+    "Serial_No": "1077",
+    "Model": "TNC-L03-SP",
+    "Maker": "TAKAHASHI"
+  },
+  {
+    "Machine_No": "TLB-04",
+    "Serial_No": "1074",
+    "Model": "TNC-L03-SP",
+    "Maker": "TAKAHASHI"
+  },
+  {
+    "Machine_No": "TLB-05",
+    "Serial_No": "1036",
+    "Model": "TNC-L03-SP",
+    "Maker": "TAKAHASHI"
+  },
+  {
+    "Machine_No": "TLB-06",
+    "Serial_No": "1075",
+    "Model": "TNC-L03-SP",
+    "Maker": "TAKAHASHI"
+  },
+  {
+    "Machine_No": "TLB-07",
+    "Serial_No": "1065",
+    "Model": "TNC-L03-SP",
+    "Maker": "TAKAHASHI"
+  },
+  {
+    "Machine_No": "TLB-08",
+    "Serial_No": "1070",
+    "Model": "TNC-L03-SP",
+    "Maker": "TAKAHASHI"
+  },
+  {
+    "Machine_No": "TLB-09",
+    "Serial_No": "1072",
+    "Model": "TNC-L03-SP",
+    "Maker": "TAKAHASHI"
+  },
+  {
+    "Machine_No": "TLB-10",
+    "Serial_No": "1068",
+    "Model": "TNC-L03-SP",
+    "Maker": "TAKAHASHI"
+  },
+  {
+    "Machine_No": "TLB-11",
+    "Serial_No": "1060",
+    "Model": "TNC-L03-SP",
+    "Maker": "TAKAHASHI"
+  },
+  {
+    "Machine_No": "TLB-12",
+    "Serial_No": "1064",
+    "Model": "TNC-L03-SP",
+    "Maker": "TAKAHASHI"
+  },
+  {
+    "Machine_No": "TLB-13",
+    "Serial_No": "1024",
+    "Model": "TNC-L03-SP",
+    "Maker": "TAKAHASHI"
+  },
+  {
+    "Machine_No": "TLB-14",
+    "Serial_No": "1051",
+    "Model": "TNC-L03-SP",
+    "Maker": "TAKAHASHI"
+  },
+  {
+    "Machine_No": "TLB-15",
+    "Serial_No": "1061",
+    "Model": "TNC-L03-SP",
+    "Maker": "TAKAHASHI"
+  },
+  {
+    "Machine_No": "TLB-16",
+    "Serial_No": "1073",
+    "Model": "TNC-L03-SP",
+    "Maker": "TAKAHASHI"
+  },
+  {
+    "Machine_No": "TLB-17",
+    "Serial_No": "1063",
+    "Model": "TNC-L03-SP",
+    "Maker": "TAKAHASHI"
+  },
+  {
+    "Machine_No": "TLB-18",
+    "Serial_No": "1069",
+    "Model": "TNC-L03-SP",
+    "Maker": "TAKAHASHI"
+  },
+  {
+    "Machine_No": "TLB-19",
+    "Serial_No": "1049",
+    "Model": "TNC-L03-SP",
+    "Maker": "TAKAHASHI"
+  },
+  {
+    "Machine_No": "TLB-20",
+    "Serial_No": "1038",
+    "Model": "TNC-L03-SP",
+    "Maker": "TAKAHASHI"
+  },
+  {
+    "Machine_No": "TLB-21",
+    "Serial_No": "1048",
+    "Model": "TNC-L03-SP",
+    "Maker": "TAKAHASHI"
+  },
+  {
+    "Machine_No": "TLB-22",
+    "Serial_No": "1044",
+    "Model": "TNC-L03-SP",
+    "Maker": "TAKAHASHI"
+  },
+  {
+    "Machine_No": "TLB-23",
+    "Serial_No": "1067",
+    "Model": "TNC-L03-SP",
+    "Maker": "TAKAHASHI"
+  },
+  {
+    "Machine_No": "TLB-24",
+    "Serial_No": 1025,
+    "Model": "TNC-L03-SP",
+    "Maker": "TAKAHASHI"
+  },
+  {
+    "Machine_No": "TLB-25",
+    "Serial_No": 1017,
+    "Model": "TNC-L03-SP",
+    "Maker": "TAKAHASHI"
+  },
+  {
+    "Machine_No": "TN-01",
+    "Serial_No": 141,
+    "Model": "C150(X)",
+    "Maker": "TSUGAMI"
+  },
+  {
+    "Machine_No": "TN-02",
+    "Serial_No": 293,
+    "Model": "C150(X)",
+    "Maker": "TSUGAMI"
+  },
+  {
+    "Machine_No": "TN-03",
+    "Serial_No": 225,
+    "Model": "C150(X)",
+    "Maker": "TSUGAMI"
+  },
+  {
+    "Machine_No": "TN-04",
+    "Serial_No": 157,
+    "Model": "C150(X)",
+    "Maker": "TSUGAMI"
+  },
+  {
+    "Machine_No": "TN-05",
+    "Serial_No": 203,
+    "Model": "C150(X)",
+    "Maker": "TSUGAMI"
+  },
+  {
+    "Machine_No": "TN-06",
+    "Serial_No": 144,
+    "Model": "C150(X)",
+    "Maker": "TSUGAMI"
+  },
+  {
+    "Machine_No": "TN-07",
+    "Serial_No": 153,
+    "Model": "C150(X)",
+    "Maker": "TSUGAMI"
+  },
+  {
+    "Machine_No": "TN-08",
+    "Serial_No": 133,
+    "Model": "C150(X)",
+    "Maker": "TSUGAMI"
+  },
+  {
+    "Machine_No": "TN-09",
+    "Serial_No": 135,
+    "Model": "C150(X)",
+    "Maker": "TSUGAMI"
+  },
+  {
+    "Machine_No": "TN-10",
+    "Serial_No": 294,
+    "Model": "C150(X)",
+    "Maker": "TSUGAMI"
+  },
+  {
+    "Machine_No": "TN-11",
+    "Serial_No": 279,
+    "Model": "C150(X)",
+    "Maker": "TSUGAMI"
+  },
+  {
+    "Machine_No": "TN-12",
+    "Serial_No": 185,
+    "Model": "C150(X)",
+    "Maker": "TSUGAMI"
+  },
+  {
+    "Machine_No": "TN-13",
+    "Serial_No": 219,
+    "Model": "C150(X)",
+    "Maker": "TSUGAMI"
+  },
+  {
+    "Machine_No": "TN-14",
+    "Serial_No": 148,
+    "Model": "C150(X)",
+    "Maker": "TSUGAMI"
+  },
+  {
+    "Machine_No": "TN-15",
+    "Serial_No": 115,
+    "Model": "C150(X)",
+    "Maker": "TSUGAMI"
+  },
+  {
+    "Machine_No": "TN-16",
+    "Serial_No": 142,
+    "Model": "C150(X)",
+    "Maker": "TSUGAMI"
+  },
+  {
+    "Machine_No": "TN-17",
+    "Serial_No": 281,
+    "Model": "C150(X)",
+    "Maker": "TSUGAMI"
+  },
+  {
+    "Machine_No": "TN-18",
+    "Serial_No": 278,
+    "Model": "C150(X)",
+    "Maker": "TSUGAMI"
+  },
+  {
+    "Machine_No": "TN-19",
+    "Serial_No": 137,
+    "Model": "C150(X)",
+    "Maker": "TSUGAMI"
+  },
+  {
+    "Machine_No": "TN-20",
+    "Serial_No": 149,
+    "Model": "C150(X)",
+    "Maker": "TSUGAMI"
+  },
+  {
+    "Machine_No": "TN-21",
+    "Serial_No": 114,
+    "Model": "C150(X)",
+    "Maker": "TSUGAMI"
+  },
+  {
+    "Machine_No": "TN-22",
+    "Serial_No": 292,
+    "Model": "C150(X)",
+    "Maker": "TSUGAMI"
+  },
+  {
+    "Machine_No": "TN-23",
+    "Serial_No": 277,
+    "Model": "C150(X)",
+    "Maker": "TSUGAMI"
+  },
+  {
+    "Machine_No": "TN-24",
+    "Serial_No": 282,
+    "Model": "C150(X)",
+    "Maker": "TSUGAMI"
+  },
+  {
+    "Machine_No": "TN-25",
+    "Serial_No": 288,
+    "Model": "C150(X)",
+    "Maker": "TSUGAMI"
+  },
+  {
+    "Machine_No": "TN-26",
+    "Serial_No": 120,
+    "Model": "C150(X)",
+    "Maker": "TSUGAMI"
+  },
+  {
+    "Machine_No": "TN-27",
+    "Serial_No": 134,
+    "Model": "C150(X)",
+    "Maker": "TSUGAMI"
+  },
+  {
+    "Machine_No": "TN-28",
+    "Serial_No": 268,
+    "Model": "C150(X)",
+    "Maker": "TSUGAMI"
+  },
+  {
+    "Machine_No": "TN-29",
+    "Serial_No": 295,
+    "Model": "C150(X)",
+    "Maker": "TSUGAMI"
+  },
+  {
+    "Machine_No": "TN-30",
+    "Serial_No": 204,
+    "Model": "C150(X)",
+    "Maker": "TSUGAMI"
+  },
+  {
+    "Machine_No": "TN-31",
+    "Serial_No": 287,
+    "Model": "C150(X)",
+    "Maker": "TSUGAMI"
+  },
+  {
+    "Machine_No": "TN-32",
+    "Serial_No": 136,
+    "Model": "C150(X)",
+    "Maker": "TSUGAMI"
+  },
+  {
+    "Machine_No": "TN-33",
+    "Serial_No": 138,
+    "Model": "C150(X)",
+    "Maker": "TSUGAMI"
+  },
+  {
+    "Machine_No": "TN-34",
+    "Serial_No": 119,
+    "Model": "C150(X)",
+    "Maker": "TSUGAMI"
+  },
+  {
+    "Machine_No": "TN-35",
+    "Serial_No": 151,
+    "Model": "C150(X)",
+    "Maker": "TSUGAMI"
+  },
+  {
+    "Machine_No": "TN-36",
+    "Serial_No": 139,
+    "Model": "C150(X)",
+    "Maker": "TSUGAMI"
+  },
+  {
+    "Machine_No": "TN-37",
+    "Serial_No": 130,
+    "Model": "C150(X)",
+    "Maker": "TSUGAMI"
+  },
+  {
+    "Machine_No": "TN-38",
+    "Serial_No": 122,
+    "Model": "C150(X)",
+    "Maker": "TSUGAMI"
+  },
+  {
+    "Machine_No": "TN-39",
+    "Serial_No": 131,
+    "Model": "C150(X)",
+    "Maker": "TSUGAMI"
+  },
+  {
+    "Machine_No": "TN-40",
+    "Serial_No": 155,
+    "Model": "C150(X)",
+    "Maker": "TSUGAMI"
+  },
+  {
+    "Machine_No": "TN-41",
+    "Serial_No": 283,
+    "Model": "C150(X)",
+    "Maker": "TSUGAMI"
+  },
+  {
+    "Machine_No": "TN-42",
+    "Serial_No": 296,
+    "Model": "C150(X)",
+    "Maker": "TSUGAMI"
+  },
+  {
+    "Machine_No": "TN-43",
+    "Serial_No": 289,
+    "Model": "C150(X)",
+    "Maker": "TSUGAMI"
+  },
+  {
+    "Machine_No": "TN-44",
+    "Serial_No": 266,
+    "Model": "C150(X)",
+    "Maker": "TSUGAMI"
+  },
+  {
+    "Machine_No": "TN-45",
+    "Serial_No": 113,
+    "Model": "C150(X)",
+    "Maker": "TSUGAMI"
+  },
+  {
+    "Machine_No": "TN-46",
+    "Serial_No": 118,
+    "Model": "C150(X)",
+    "Maker": "TSUGAMI"
+  },
+  {
+    "Machine_No": "TN-47",
+    "Serial_No": 150,
+    "Model": "C150(X)",
+    "Maker": "TSUGAMI"
+  },
+  {
+    "Machine_No": "TN-48",
+    "Serial_No": 226,
+    "Model": "C150(X)",
+    "Maker": "TSUGAMI"
+  },
+  {
+    "Machine_No": "TN-49",
+    "Serial_No": 222,
+    "Model": "C150(X)",
+    "Maker": "TSUGAMI"
+  },
+  {
+    "Machine_No": "TN-50",
+    "Serial_No": 121,
+    "Model": "C150(X)",
+    "Maker": "TSUGAMI"
+  },
+  {
+    "Machine_No": "TN-51",
+    "Serial_No": 154,
+    "Model": "C150(X)",
+    "Maker": "TSUGAMI"
+  },
+  {
+    "Machine_No": "TN-52",
+    "Serial_No": 274,
+    "Model": "C150(X)",
+    "Maker": "TSUGAMI"
+  },
+  {
+    "Machine_No": "TN-53",
+    "Serial_No": 201,
+    "Model": "C150(X)",
+    "Maker": "TSUGAMI"
+  },
+  {
+    "Machine_No": "TN-54",
+    "Serial_No": 290,
+    "Model": "C150(X)",
+    "Maker": "TSUGAMI"
+  },
+  {
+    "Machine_No": "TN-55",
+    "Serial_No": 286,
+    "Model": "C150(X)",
+    "Maker": "TSUGAMI"
+  },
+  {
+    "Machine_No": "TN-56",
+    "Serial_No": 145,
+    "Model": "C150(X)",
+    "Maker": "TSUGAMI"
+  },
+  {
+    "Machine_No": "TN-57",
+    "Serial_No": 269,
+    "Model": "C150(X)",
+    "Maker": "TSUGAMI"
+  },
+  {
+    "Machine_No": "TN-58",
+    "Serial_No": 156,
+    "Model": "C150(X)",
+    "Maker": "TSUGAMI"
+  },
+  {
+    "Machine_No": "TN-59",
+    "Serial_No": 184,
+    "Model": "C150(X)",
+    "Maker": "TSUGAMI"
+  },
+  {
+    "Machine_No": "TN-60",
+    "Serial_No": 143,
+    "Model": "C150(X)",
+    "Maker": "TSUGAMI"
+  },
+  {
+    "Machine_No": "TN-61",
+    "Serial_No": 202,
+    "Model": "C150(X)",
+    "Maker": "TSUGAMI"
+  },
+  {
+    "Machine_No": "TN-62",
+    "Serial_No": 220,
+    "Model": "C150(X)",
+    "Maker": "TSUGAMI"
+  },
+  {
+    "Machine_No": "TN-63",
+    "Serial_No": 267,
+    "Model": "C150(X)",
+    "Maker": "TSUGAMI"
+  },
+  {
+    "Machine_No": "TN-64",
+    "Serial_No": 218,
+    "Model": "C150(X)",
+    "Maker": "TSUGAMI"
+  },
+  {
+    "Machine_No": "TN-65",
+    "Serial_No": 128,
+    "Model": "C150(X)",
+    "Maker": "TSUGAMI"
+  },
+  {
+    "Machine_No": "TN-66",
+    "Serial_No": 205,
+    "Model": "C150(X)",
+    "Maker": "TSUGAMI"
+  },
+  {
+    "Machine_No": "TN-67",
+    "Serial_No": 276,
+    "Model": "C150(X)",
+    "Maker": "TSUGAMI"
+  },
+  {
+    "Machine_No": "TN-68",
+    "Serial_No": 201,
+    "Model": "C150(X)",
+    "Maker": "TSUGAMI"
+  },
+  {
+    "Machine_No": "TN-69",
+    "Serial_No": 227,
+    "Model": "C150(X)",
+    "Maker": "TSUGAMI"
+  },
+  {
+    "Machine_No": "TN-70",
+    "Serial_No": 132,
+    "Model": "C150(X)",
+    "Maker": "TSUGAMI"
+  },
+  {
+    "Machine_No": "TN-71",
+    "Serial_No": 117,
+    "Model": "C150(X)",
+    "Maker": "TSUGAMI"
+  },
+  {
+    "Machine_No": "TN-72",
+    "Serial_No": 152,
+    "Model": "C150(X)",
+    "Maker": "TSUGAMI"
+  },
+  {
+    "Machine_No": "TN-73",
+    "Serial_No": 280,
+    "Model": "C150(X)",
+    "Maker": "TSUGAMI"
+  },
+  {
+    "Machine_No": "TN-74",
+    "Serial_No": 129,
+    "Model": "C150(X)",
+    "Maker": "TSUGAMI"
+  },
+  {
+    "Machine_No": "TN-75",
+    "Serial_No": 224,
+    "Model": "C150(X)",
+    "Maker": "TSUGAMI"
+  },
+  {
+    "Machine_No": "TN-76",
+    "Serial_No": 116,
+    "Model": "C150(X)",
+    "Maker": "TSUGAMI"
+  },
+  {
+    "Machine_No": "TN-77",
+    "Serial_No": 183,
+    "Model": "C150(X)",
+    "Maker": "TSUGAMI"
+  },
+  {
+    "Machine_No": "TN-78",
+    "Serial_No": 140,
+    "Model": "C150(X)",
+    "Maker": "TSUGAMI"
+  },
+  {
+    "Machine_No": "TN-79",
+    "Serial_No": 285,
+    "Model": "C150(X)",
+    "Maker": "TSUGAMI"
+  },
+  {
+    "Machine_No": "TN-80",
+    "Serial_No": 223,
+    "Model": "C150(X)",
+    "Maker": "TSUGAMI"
+  },
+  {
+    "Machine_No": "TN-81",
+    "Serial_No": 284,
+    "Model": "C150(X)",
+    "Maker": "TSUGAMI"
+  },
+  {
+    "Machine_No": "TN-82",
+    "Serial_No": 221,
+    "Model": "C150(X)",
+    "Maker": "TSUGAMI"
+  },
+  {
+    "Machine_No": "TR-01",
+    "Serial_No": "7761",
+    "Model": "SAS-16.6",
+    "Maker": "TORNOS"
+  },
+  {
+    "Machine_No": "TR-02",
+    "Serial_No": "7760",
+    "Model": "SAS-16.6",
+    "Maker": "TORNOS"
+  },
+  {
+    "Machine_No": "TR-03",
+    "Serial_No": "7008",
+    "Model": "SAS-16.6",
+    "Maker": "TORNOS"
+  },
+  {
+    "Machine_No": "TR-04",
+    "Serial_No": "7094",
+    "Model": "SAS-16.6",
+    "Maker": "TORNOS"
+  },
+  {
+    "Machine_No": "TR-05",
+    "Serial_No": 7095,
+    "Model": "SAS-16.6",
+    "Maker": "TORNOS"
+  },
+  {
+    "Machine_No": "TR-06",
+    "Serial_No": 7759,
+    "Model": "SAS-16.6",
+    "Maker": "TORNOS"
+  },
+  {
+    "Machine_No": "TTC-01",
+    "Serial_No": "154",
+    "Model": "C15(X1,X2)",
+    "Maker": "TSUGAMI"
+  },
+  {
+    "Machine_No": "TTC-02",
+    "Serial_No": "143",
+    "Model": "C15(X1,X2)",
+    "Maker": "TSUGAMI"
+  },
+  {
+    "Machine_No": "TTC-03",
+    "Serial_No": "149",
+    "Model": "C15(X1,X2)",
+    "Maker": "TSUGAMI"
+  },
+  {
+    "Machine_No": "TTC-04",
+    "Serial_No": "150",
+    "Model": "C15(X1,X2)",
+    "Maker": "TSUGAMI"
+  },
+  {
+    "Machine_No": "TTC-05",
+    "Serial_No": "147",
+    "Model": "C15(X1,X2)",
+    "Maker": "TSUGAMI"
+  },
+  {
+    "Machine_No": "TTC-06",
+    "Serial_No": "148",
+    "Model": "C15(X1,X2)",
+    "Maker": "TSUGAMI"
+  },
+  {
+    "Machine_No": "TTC-07",
+    "Serial_No": "163",
+    "Model": "C15(X1,X2)",
+    "Maker": "TSUGAMI"
+  },
+  {
+    "Machine_No": "TTC-08",
+    "Serial_No": "151",
+    "Model": "C15(X1,X2)",
+    "Maker": "TSUGAMI"
+  },
+  {
+    "Machine_No": "TTC-09",
+    "Serial_No": "122",
+    "Model": "C15(X1,X2)",
+    "Maker": "TSUGAMI"
+  },
+  {
+    "Machine_No": "TTC-10",
+    "Serial_No": "114",
+    "Model": "C15(X1,X2)",
+    "Maker": "TSUGAMI"
+  },
+  {
+    "Machine_No": "TTC-11",
+    "Serial_No": "110",
+    "Model": "C15(X1,X2)",
+    "Maker": "TSUGAMI"
+  },
+  {
+    "Machine_No": "TTC-12",
+    "Serial_No": "119",
+    "Model": "C15(X1,X2)",
+    "Maker": "TSUGAMI"
+  },
+  {
+    "Machine_No": "TTC-13",
+    "Serial_No": "111",
+    "Model": "C15(X1,X2)",
+    "Maker": "TSUGAMI"
+  },
+  {
+    "Machine_No": "TTC-14",
+    "Serial_No": "117",
+    "Model": "C15(X1,X2)",
+    "Maker": "TSUGAMI"
+  },
+  {
+    "Machine_No": "TTC-15",
+    "Serial_No": "120",
+    "Model": "C15(X1,X2)",
+    "Maker": "TSUGAMI"
+  },
+  {
+    "Machine_No": "TTC-16",
+    "Serial_No": 123,
+    "Model": "C15(X1,X2)",
+    "Maker": "TSUGAMI"
+  },
+  {
+    "Machine_No": "TTC-17",
+    "Serial_No": "144",
+    "Model": "C15(X1,X2)",
+    "Maker": "TSUGAMI"
+  },
+  {
+    "Machine_No": "TTC-18",
+    "Serial_No": "160",
+    "Model": "C15(X1,X2)",
+    "Maker": "TSUGAMI"
+  },
+  {
+    "Machine_No": "TTC-19",
+    "Serial_No": "162",
+    "Model": "C15(X1,X2)",
+    "Maker": "TSUGAMI"
+  },
+  {
+    "Machine_No": "TTC-20",
+    "Serial_No": "146",
+    "Model": "C15(X1,X2)",
+    "Maker": "TSUGAMI"
+  },
+  {
+    "Machine_No": "TTC-21",
+    "Serial_No": "145",
+    "Model": "C15(X1,X2)",
+    "Maker": "TSUGAMI"
+  },
+  {
+    "Machine_No": "TTC-22",
+    "Serial_No": "159",
+    "Model": "C15(X1,X2)",
+    "Maker": "TSUGAMI"
+  },
+  {
+    "Machine_No": "TTC-23",
+    "Serial_No": "106",
+    "Model": "C15(X1,X2)",
+    "Maker": "TSUGAMI"
+  },
+  {
+    "Machine_No": "TTC-24",
+    "Serial_No": "107",
+    "Model": "C15(X1,X2)",
+    "Maker": "TSUGAMI"
+  },
+  {
+    "Machine_No": "TTC-25",
+    "Serial_No": "112",
+    "Model": "C15(X1,X2)",
+    "Maker": "TSUGAMI"
+  },
+  {
+    "Machine_No": "TTC-26",
+    "Serial_No": "113",
+    "Model": "C15(X1,X2)",
+    "Maker": "TSUGAMI"
+  },
+  {
+    "Machine_No": "TTC-27",
+    "Serial_No": 116,
+    "Model": "C15(X1,X2)",
+    "Maker": "TSUGAMI"
+  },
+  {
+    "Machine_No": "TTC-28",
+    "Serial_No": 118,
+    "Model": "C15(X1,X2)",
+    "Maker": "TSUGAMI"
+  },
+  {
+    "Machine_No": "TTC-29",
+    "Serial_No": "109",
+    "Model": "C15(X1,X2)",
+    "Maker": "TSUGAMI"
+  },
+  {
+    "Machine_No": "TTC-30",
+    "Serial_No": "121",
+    "Model": "C15(X1,X2)",
+    "Maker": "TSUGAMI"
+  },
+  {
+    "Machine_No": "TTC-31",
+    "Serial_No": "115",
+    "Model": "C15(X1,X2)",
+    "Maker": "TSUGAMI"
+  },
+  {
+    "Machine_No": "TTC-32",
+    "Serial_No": "142",
+    "Model": "C15(X1,X2)",
+    "Maker": "TSUGAMI"
+  },
+  {
+    "Machine_No": "TTC-33",
+    "Serial_No": "141",
+    "Model": "C15(X1,X2)",
+    "Maker": "TSUGAMI"
+  },
+  {
+    "Machine_No": "TTC-34",
+    "Serial_No": "104",
+    "Model": "C15(X1,X2)",
+    "Maker": "TSUGAMI"
+  },
+  {
+    "Machine_No": "TTC-35",
+    "Serial_No": "105",
+    "Model": "C15(X1,X2)",
+    "Maker": "TSUGAMI"
+  },
+  {
+    "Machine_No": "TTC-36",
+    "Serial_No": "140",
+    "Model": "C15(X1,X2)",
+    "Maker": "TSUGAMI"
+  },
+  {
+    "Machine_No": "TTC-37",
+    "Serial_No": "152",
+    "Model": "C15(X1,X2)",
+    "Maker": "TSUGAMI"
+  },
+  {
+    "Machine_No": "TTC-38",
+    "Serial_No": "153",
+    "Model": "C15(X1,X2)",
+    "Maker": "TSUGAMI"
+  },
+  {
+    "Machine_No": "TTC-39",
+    "Serial_No": "161",
+    "Model": "C15(X1,X2)",
+    "Maker": "TSUGAMI"
+  },
+  {
+    "Machine_No": "TTC-40",
+    "Serial_No": "108",
+    "Model": "C15(X1,X2)",
+    "Maker": "TSUGAMI"
+  },
+  {
+    "Machine_No": "UD-02",
+    "Serial_No": "",
+    "Model": "",
+    "Maker": "MACHINE SHOP 2"
+  },
+  {
+    "Machine_No": "UD-07",
+    "Serial_No": "",
+    "Model": "",
+    "Maker": "MACHINE SHOP 2"
+  },
+  {
+    "Machine_No": "UD-08",
+    "Serial_No": "",
+    "Model": "",
+    "Maker": "MACHINE SHOP 2"
+  },
+  {
+    "Machine_No": "WT-02",
+    "Serial_No": "S-7003",
+    "Model": "C-3409A",
+    "Maker": "SONIC FELLOW"
+  },
+  {
+    "Machine_No": "WT-03",
+    "Serial_No": "S-6900",
+    "Model": "C-3363A",
+    "Maker": "SONIC FELLOW"
+  }
+]

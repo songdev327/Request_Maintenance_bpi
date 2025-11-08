@@ -1,0 +1,38 @@
+#list-product{
+    background-color: rgb(227, 227, 227);
+    padding: 0.3rem;
+    box-shadow: 1px 1px 2px 2px rgb(104, 104, 104);
+    margin-top: 0.3rem;
+}
+
+/* product.css */
+.select-lg {
+  font-size: 1.15rem;
+  padding: 10px 14px;
+  height: 48px;
+  min-width: 220px;
+}
+#board-product{
+  background-color: rgb(229, 229, 229);
+  border: solid rgb(159, 159, 159) 1px;
+}
+
+.approve-green-pro {
+  background-color: green !important;
+  color: white !important;
+}
+
+.table-bordered-black th,
+.table-bordered-black td {
+  border: 1px solid black !important;
+}
+
+@keyframes blink {
+  0% { opacity: 1; }
+  50% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+.blinking {
+  animation: blink 1s infinite;
+}
