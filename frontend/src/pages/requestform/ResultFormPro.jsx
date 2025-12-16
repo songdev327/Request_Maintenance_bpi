@@ -77,7 +77,7 @@ function ResultFormPro() {
             { name: "", model: "", maker: "", qty: "", unit: "" },
             { name: "", model: "", maker: "", qty: "", unit: "" },
         ],
-        control: "control",
+        control: "",
     });
 
     // เวลาแบบ HH:MM (ถ้าต้องการวินาที เปลี่ยนเป็น HH:MM:SS ได้)
@@ -610,6 +610,15 @@ function ResultFormPro() {
                             <Line label="TOTAL (Hr.)" col={2}
                                 value={formData.total_hr} readOnly
                             />
+                        </div>
+
+                          <div className="mr-col-4 mr-line-wrap mt-2">
+                                    <div className="mr-label" style={{ fontSize: "0.9rem" }}>Cause (สาเหตุ)</div>
+                                    <input
+                                        value={formData.cause_mm || ""}
+                                        className="mr-line text-primary"
+                                        readOnly
+                               />
                         </div>
 
                     </section>

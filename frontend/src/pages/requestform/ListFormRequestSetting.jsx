@@ -15,6 +15,8 @@ import SnowshoeingIcon from '@mui/icons-material/Snowshoeing';
 import ManageSearchIcon from '@mui/icons-material/ManageSearch';
 import * as XLSX from "xlsx";
 import InProgressRemarkModal from "../modals/InProgressRemarkModal";
+import CheckCircleOutlineIcon from '@mui/icons-material/CheckCircleOutline';
+import "./modalApp.css"
 
 function ListFormRequestSetting() {
     const location = useLocation();
@@ -103,6 +105,48 @@ function ListFormRequestSetting() {
             </li>`).join("")}
         </ul>`;
         Swal.fire({ title: `รายการ In Progress (${items.length})`, html, width: 800, confirmButtonText: 'ปิด' });
+    };
+
+    const handleShowApprovePendingList = () => {
+        const items = requestList.filter(item =>
+            item.request_status === "finished" &&
+            (item.approve_by == null || String(item.approve_by).trim() === "") &&
+            (locFilter === "ALL" || String(item.Location_Name || "").toUpperCase() === locFilter)
+        );
+
+        if (items.length === 0) {
+            Swal.fire("ไม่มีรายการรอ Approve", "", "info");
+            return;
+        }
+
+        const esc = (v) =>
+            String(v ?? "")
+                .replace(/&/g, "&amp;")
+                .replace(/</g, "&lt;")
+                .replace(/>/g, "&gt;")
+                .replace(/"/g, "&quot;")
+                .replace(/'/g, "&#39;");
+
+        const html = `
+            <ul style="text-align:left; margin:0; padding-left:18px;">
+                ${items.map(item => `
+                    <li>
+                        <b>${esc(item.Location_Name ?? "-")} : 
+                        ${esc(item.date ?? "-")} : 
+                        ${esc(item.machine_request_name ?? "-")}</b> :
+                        <span style="color:#d32f2f; font-weight:600;">${esc(item.brief_description ?? "-")} </span> :
+                        <span style="color:#0222f6; font-weight:600;">${esc(item.corrective ?? "-")} </span>
+                    </li>
+                `).join("")}
+            </ul>
+        `;
+
+        Swal.fire({
+            title: `รายการรอ Approve (${items.length})`,
+            html,
+            width: 800,
+            confirmButtonText: "ปิด"
+        });
     };
 
     useEffect(() => {
@@ -494,6 +538,11 @@ function ListFormRequestSetting() {
     const requestCount = filtered.filter(item => isRequest(item.request_status)).length;
     const inProgressCount = filtered.filter(item => isInProgress(item.request_status)).length;
 
+    const approvePendingCount = filtered.filter(item =>
+        item.request_status === "finished" &&
+        (item.approve_by == null || String(item.approve_by).trim() === "")
+    ).length;
+
     const totalItems = filtered.length;
     const totalPages = Math.max(1, Math.ceil(totalItems / pageSize));
 
@@ -517,6 +566,7 @@ function ListFormRequestSetting() {
                     <span style={{ color: "rgba(0, 154, 8, 1)" }}>
                         ( {sectionName || locFilter} {machineName ? `/ ${machineName}` : ""} )
                     </span>
+
                     <div style={{ textAlign: "right" }} className="mr-5">
                         {requestCount > 0 ? (
                             <div style={{ textAlign: "right" }} className="mr-5">
@@ -541,7 +591,31 @@ function ListFormRequestSetting() {
                                 />
                             </Badge>
                         </span>
+
+                        <div
+                            style={{ textAlign: "left", cursor: approvePendingCount > 0 ? "pointer" : "default" }}
+                            className="mr-5"
+                            onClick={() => {
+                                if (approvePendingCount > 0) {
+                                    handleShowApprovePendingList();
+                                }
+                            }}
+                        >
+                            {approvePendingCount > 0 ? (
+                                <Badge badgeContent={approvePendingCount} color="success">
+                                    <CheckCircleOutlineIcon
+                                        style={{ fontSize: "2.2rem", color: "#2e7d32" }}
+                                    />
+                                </Badge>
+                            ) : (
+                                <CheckCircleOutlineIcon
+                                    style={{ fontSize: "2.2rem", color: "#9e9e9e" }}
+                                />
+                            )}
+                        </div>
+
                     </div>
+                    
                 </h4>
             </div>
 
@@ -716,7 +790,7 @@ function ListFormRequestSetting() {
             {/* ตาราง */}
             <div className="table-responsive">
                 <table className="table table-bordered table-striped table-bordered-black">
-                    <thead className="table-board-mm">
+                    <thead className="table-dark">
                         <tr>
                             <th className="text-white" style={{ width: "5rem", fontSize: "0.965rem" }}>NO</th>
                             <th className="text-white" style={{ width: "12.5rem", fontSize: "0.965rem" }}>DATE</th>

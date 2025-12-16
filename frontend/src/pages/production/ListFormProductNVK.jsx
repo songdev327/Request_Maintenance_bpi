@@ -481,7 +481,7 @@ function ListFormProductNVK() {
             {/* ตาราง */}
             <div className="table-responsive">
                 <table className="table table-bordered table-striped table-bordered-black">
-                    <thead className="bg-dark">
+                    <thead className="table-dark">
                         <tr>
                             <th className="text-white" style={{ width: "5rem", fontSize: "0.965rem" }}>NO</th>
                             <th className="text-white" style={{ width: "12.5rem", fontSize: "0.965rem" }}>DATE</th>
@@ -535,12 +535,25 @@ function ListFormProductNVK() {
                                 >
                                     {item.corrective || '-'}
                                 </td>
-                                <td
+
+                                {/* <td
                                     className={(
                                         (item.result === "OK" || item.result === "OK NEW SETUP") &&
                                         item.pro_receive !== "Receive"
                                     ) ? "blinking approve-green-pro" :
                                         (item.result === "OK" || item.result === "OK NEW SETUP" ? "approve-green-pro" : "")}
+                                >
+                                    {item.result || ""}
+                                </td> */}
+
+                                <td
+                                    className={
+                                        (item.result && item.result.trim() !== "" && item.pro_receive !== "Receive")
+                                            ? "blinking approve-green-pro"
+                                            : (item.result && item.result.trim() !== ""
+                                                ? "approve-green-pro"
+                                                : "")
+                                    }
                                 >
                                     {item.result || ""}
                                 </td>

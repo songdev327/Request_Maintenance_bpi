@@ -818,6 +818,8 @@ app.put('/updateRequestToPro/:id', async (req, res) => {
     cause_product_process,
     corrective,
     result,
+    cause_mm,
+
     spare_parts,
     control,
     approve_by,
@@ -849,6 +851,8 @@ app.put('/updateRequestToPro/:id', async (req, res) => {
       cause_product_process,
       corrective,
       result,
+      cause_mm,
+
       spare_parts,
       control,
       approve_by,
@@ -915,6 +919,8 @@ app.put('/updateRequestToProSetting/:id', async (req, res) => {
 
     corrective,
     result,
+    cause_mm,
+    
     spare_parts,
     control,
     approve_by,
@@ -967,6 +973,8 @@ app.put('/updateRequestToProSetting/:id', async (req, res) => {
 
       corrective,
       result,
+      cause_mm,
+
       spare_parts,
       control,
       approve_by,

@@ -8,6 +8,7 @@
 .mr-header h1{ margin:0; font-size:22px; font-weight:800; letter-spacing:.6px; color:#111827; } */
 .mr-btn{ background:#0ea5e9; border:none; color:#fff; padding:8px 14px; border-radius:10px; font-weight:700; cursor:pointer; }
 .mr-btn:hover{ background:#0284c7; }
+.mr-btn:hover{ background:#0222f6; }
 
 /* Grid 24-cols */
 .mr-row{ display:grid; grid-template-columns:repeat(24,1fr); gap:10px; margin-top:10px; }
@@ -293,6 +294,9 @@
   background-color: #e7e7e7;
 }
 
+#bg-dark{
+  background-color: black;
+}
 
 
 @keyframes blink {

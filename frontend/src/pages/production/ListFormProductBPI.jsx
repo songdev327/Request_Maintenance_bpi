@@ -327,7 +327,11 @@ function ListFormProductBPI() {
                     LIST REQUEST FROM PRODUCTION <span style={{ color: "rgba(0, 154, 8, 1)" }}>
                         ( BPI{machineName ? ` - ${machineName}` : ""} )
                     </span>
-                    <button className="btn btn-primary ml-3" onClick={() =>
+                    <button 
+                    style={{ height: "3rem" }}
+                    className="col-2 btn btn-primary ml-3 fw-bold"
+                    // className="btn btn-primary ml-3" 
+                    onClick={() =>
                         navigate("/maintenanceFormPro", {
                             state: {
                                 // section: selectedSection,
@@ -480,7 +484,7 @@ function ListFormProductBPI() {
             {/* ตาราง */}
             <div className="table-responsive">
                 <table className="table table-bordered table-striped table-bordered-black">
-                    <thead className="bg-dark">
+                    <thead className="table-dark">
                         <tr>
                             <th className="text-white" style={{ width: "5rem", fontSize: "0.965rem" }}>NO</th>
                             <th className="text-white" style={{ width: "12.5rem", fontSize: "0.965rem" }}>DATE</th>
@@ -534,12 +538,25 @@ function ListFormProductBPI() {
                                 >
                                     {item.corrective || '-'}
                                 </td>
-                                <td
+
+                                {/* <td
                                     className={(
                                         (item.result === "OK" || item.result === "OK NEW SETUP") &&
                                         item.pro_receive !== "Receive"
                                     ) ? "blinking approve-green-pro" :
                                         (item.result === "OK" || item.result === "OK NEW SETUP" ? "approve-green-pro" : "")}
+                                >
+                                    {item.result || ""}
+                                </td> */}
+
+                                <td
+                                    className={
+                                        (item.result && item.result.trim() !== "" && item.pro_receive !== "Receive")
+                                            ? "blinking approve-green-pro"
+                                            : (item.result && item.result.trim() !== ""
+                                                ? "approve-green-pro"
+                                                : "")
+                                    }
                                 >
                                     {item.result || ""}
                                 </td>

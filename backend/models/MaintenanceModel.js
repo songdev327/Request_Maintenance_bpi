@@ -25,6 +25,7 @@ const Maintenance = conn.define('Maintenance', {
   to_date: DataTypes.STRING,
   to_time: DataTypes.STRING,
   total_hr: DataTypes.STRING,
+
   cause_member: DataTypes.JSONB,
   cause_machine: DataTypes.JSONB,
   cause_spare: DataTypes.JSONB,
@@ -111,6 +112,8 @@ const Maintenance = conn.define('Maintenance', {
   repair_accept_time: DataTypes.TIME,
   remark_in_progress: DataTypes.STRING,
   Location_Name: DataTypes.STRING,
+
+   cause_mm: DataTypes.STRING,
 
   
 }, {

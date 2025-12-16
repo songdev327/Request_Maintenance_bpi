@@ -59,7 +59,7 @@ export default function MaintenanceForm() {
             { name: "", model: "", maker: "", qty: "" },
             { name: "", model: "", maker: "", qty: "" },
         ],
-        control: "control",
+        control: "",
         approve_by: "",
         repair_accept_by: "",
     });

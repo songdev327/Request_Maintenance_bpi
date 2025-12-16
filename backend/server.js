@@ -7,8 +7,8 @@ const app = express();
 //-------------- Start Update data base ----------------------------------------------------
 
 // const fs = require('fs'); // Update data base
-// const path = require('path'); // Update data base
-// const SparePart = require('./models/MachineSerialModel'); // Update data base
+// // const path = require('path'); // Update data base
+// const SparePart = require('./models/ListSparePartModel'); // Update data base
 
 //-------------- End Update data base --------------------------------------------------------------
 
@@ -27,8 +27,8 @@ app.use(cors());
 app.use(express.json());
 
 
-
 //------ Start Run server on Linux ----------------------------------
+
 // const http = require('http');
 // const server = http.createServer(app);
 
@@ -64,6 +64,9 @@ app.use(express.json());
 // const path = require("path");
 // app.use(express.static(path.join(__dirname, "../frontend/build")));
 
+// // ✅ เสิร์ฟ data/*.json โดยตรง
+// app.use("/data", express.static(path.join(__dirname, "../frontend/build/data")));
+
 //------ End Run server on Linux ----------------------------------
 
 
@@ -79,6 +82,7 @@ const Menu = require('./controllers/MenuController'); // ✅ เพิ่มต�
 app.use('/auth', Auth);    
 app.use('/menu', Menu);   // ✅ API สำหรับเมนู
 
+
 app.use('/Maintenance', require('./controllers/MaintenanceController'));
 app.use('/users', require('./controllers/UserController')); 
 app.use('/SparePart', require('./controllers/ListSparePartController')); 
@@ -90,7 +94,7 @@ app.use('/MachineSerial', require('./controllers/MachineSerialController'));
 // อ่านข้อมูลจากไฟล์ JSON และเพิ่มข้อมูลเข้าสู่ฐานข้อมูล // Update data base
 // const loadSparePartsData = async () => {
 //   try {
-//     const data = fs.readFileSync(path.join(__dirname, 'machineSerial.json'), 'utf-8');
+//     const data = fs.readFileSync(path.join(__dirname, 'sparePartsData.json'), 'utf-8');
 //     const spareParts = JSON.parse(data);
 
 //     // เพิ่มข้อมูลทั้งหมดในไฟล์ JSON เข้าไปในฐานข้อมูล
@@ -111,9 +115,12 @@ app.use('/MachineSerial', require('./controllers/MachineSerialController'));
 //------ Start Run server on Linux -------------------------------------------
 
 // ========== Fallback to React (สำหรับ React Router) ==========
-// app.get("*", (req, res) => {
+
+// app.get(/.*/, (req, res) => {
 //   res.sendFile(path.join(__dirname, "../frontend/build/index.html"));
 // });
+
+
 
 //------ End Run server on Linux --------------------------------------------
 

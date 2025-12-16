@@ -27,6 +27,10 @@
   border: 1px solid black !important;
 }
 
+#bg-dark{
+  background-color: black;
+}
+
 @keyframes blink {
   0% { opacity: 1; }
   50% { opacity: 0; }

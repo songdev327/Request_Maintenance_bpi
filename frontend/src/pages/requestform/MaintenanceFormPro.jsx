@@ -61,7 +61,7 @@ export default function MaintenanceFormPro() {
             { name: "", model: "", maker: "", qty: "", unit: "" },
             { name: "", model: "", maker: "", qty: "", unit: "" },
         ],
-        control: "control",
+        control: "",
 
     });
 

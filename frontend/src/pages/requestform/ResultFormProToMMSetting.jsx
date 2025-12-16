@@ -46,6 +46,7 @@ function ResultFormProToMMSetting() {
         cause_member_mode: "",
         corrective: "",
         result: "",
+        cause_mm: "",
 
         cause_member: {
             not_understand: false,
@@ -74,7 +75,7 @@ function ResultFormProToMMSetting() {
             chemical_gas: false,
         },
         spare_parts: [],
-        control: "control",
+        control: "",
         approve_by: "",
 
         Work_Group_Name: "",
@@ -514,6 +515,18 @@ function ResultFormProToMMSetting() {
         return hours.toFixed(2); // ⬅️ บังคับเป็นทศนิยม 2 หลักเสมอ
     };
 
+    const handleTimeBlur = (value) => {
+        if (!value) return;
+        const isValid = /^([0-1][0-9]|2[0-3]):[0-5][0-9]$/.test(value);
+        if (!isValid) {
+            Swal.fire({
+                icon: "warning",
+                title: "รูปแบบเวลาไม่ถูกต้อง",
+                text: "กรุณากรอกเวลาเป็น 00:00 - 23:59 (เช่น 08:00, 14:30)",
+            });
+        }
+    };
+
     const handleUpdate_request_to_pro = async () => {
 
         // คำนวณใหม่ทุกครั้งก่อนส่ง
@@ -605,6 +618,7 @@ function ResultFormProToMMSetting() {
                 to_date: formData.to_date,
                 to_time: formData.to_time,
                 request_status: "finished",
+                cause_mm: formData.cause_mm,
 
                 Worker_Code_1: selectedEmployeeCode,
                 Worker_Name_1: formData.work_by,
@@ -1058,7 +1072,8 @@ function ResultFormProToMMSetting() {
                                     );
                                 })}
                             </select>
-                            <Line label="FROM DATE" col={2} type="date"
+
+                            {/* <Line label="FROM DATE" col={2} type="date"
                                 value={formData.from_date || ""}
                                 onChange={(v) => setField("from_date", v)}
                             />
@@ -1074,9 +1089,73 @@ function ResultFormProToMMSetting() {
                                 value={formData.to_time}
                                 onChange={(v) => setField("to_time", v)}
                             />
-                            <Line label="TOTAL (Hr.)" col={2} value={formData.total_hr || ""} readOnly />
+                            <Line label="TOTAL (Hr.)" col={2} value={formData.total_hr || ""} readOnly /> */}
+                            
+
+                            <div className="mr-col-4 mr-line-wrap">
+                                <div className="mr-label" style={{ fontSize: "0.9rem" }}>FROM DATE</div>
+                                <input
+                                    type="date"
+                                    className="mr-line text-primary"
+                                    value={formData.from_date || ""}
+                                    onChange={(e) => setField("from_date", e.target.value)}
+                                />
+                            </div>
+
+                            <div className="mr-col-4 mr-line-wrap">
+                                <div className="mr-label" style={{ fontSize: "0.9rem" }}>TIME</div>
+                                <input
+                                    type="text"
+                                    className="mr-line text-primary"
+                                    placeholder="HH:mm"
+                                    maxLength={5}
+                                    value={normalizeTime(formData.from_time)}
+                                    onChange={(e) => setField("from_time", e.target.value)}
+                                    onBlur={(e) => handleTimeBlur(e.target.value)}
+                                />
+                            </div>
+
+                            <div className="mr-col-4 mr-line-wrap">
+                                <div className="mr-label" style={{ fontSize: "0.9rem" }}>TO DATE</div>
+                                <input
+                                    type="date"
+                                    className="mr-line text-primary"
+                                    value={formData.to_date || ""}
+                                    onChange={(e) => setField("to_date", e.target.value)}
+                                />
+                            </div>
+
+                            <div className="mr-col-4 mr-line-wrap">
+                                <div className="mr-label" style={{ fontSize: "0.9rem" }}>TIME</div>
+                                <input
+                                    type="text"
+                                    className="mr-line text-primary"
+                                    placeholder="HH:mm"
+                                    maxLength={5}
+                                    value={normalizeTime(formData.to_time)}
+                                    onChange={(e) => setField("to_time", e.target.value)}
+                                    onBlur={(e) => handleTimeBlur(e.target.value)}
+                                />
+                            </div>
+
+                            <div className="mr-col-4 mr-line-wrap">
+                                <div className="mr-label" style={{ fontSize: "0.9rem" }}>TOTAL (Hr.)</div>
+                                <input
+                                    className="mr-line text-primary"
+                                    value={formData.total_hr || ""}
+                                    readOnly
+                                />
+                            </div>
 
                         </div>
+                          <div className="mr-col-4 mr-line-wrap mt-2">
+                                    <div className="mr-label" style={{ fontSize: "0.9rem" }}>Cause (สาเหตุ)</div>
+                                    <input
+                                        value={formData.cause_mm || ""}
+                                        className="mr-line text-primary"
+                                        onChange={(e) => setField("cause_mm", e.target.value.toUpperCase())}
+                                    />
+                                </div>
                         {/* </>
                         )} */}
                     </section>

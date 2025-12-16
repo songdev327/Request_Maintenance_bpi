@@ -25,3 +25,8 @@
 input[readonly] {
   pointer-events: none;
 }
+
+.table-bordered-black th,
+.table-bordered-black td {
+  border: 1px solid black !important;
+}

@@ -1,65 +1,66 @@
 [
-  {
-    "label": "BPI",
-    "submenu": [
-      {
-        "label": "TN SLV+CONE - TN",
-        "path": "/listFormProductBPI?machine_name=TN"
-      },
-      {
-        "label": "CS SUB CUT - CS",
-        "path": "/listFormProductBPI?machine_name=CS"
-      },
-      {
-        "label": "SB SUB CUT - SB",
-        "path": "/listFormProductBPI?machine_name=SB"
-      },
-      {
-        "label": "CH SUB CUT - CH",
-        "path": "/listFormProductBPI?machine_name=CH"
-      },
-      {
-        "label": "TN SHAFT - TB",
-        "path": "/listFormProductBPI?machine_name=TB"
-      },
-      {
-        "label": "TN SHAFT - TBM",
-        "path": "/listFormProductBPI?machine_name=TBM"
-      },
-      {
-        "label": "TN SHAFT - TBS",
-        "path": "/listFormProductBPI?machine_name=TBS"
-      },
-      {
-        "label": "TN SHAFT - TTC",
-        "path": "/listFormProductBPI?machine_name=TTC"
-      },
-      {
-        "label": "TN SHAFT - TCH",
-        "path": "/listFormProductBPI?machine_name=TCH"
-      },
-      {
-        "label": "WASHING - WT",
-        "path": "/listFormProductBPI?machine_name=WT"
-      }
-    ]
-  },
-  {
-    "label": "BPI TO NVK",
-    "submenu": [
-      {
-        "label": "WASHING - WT",
-        "path": "/listFormProductBPIToNVK?machine_name=WT"
-      }
-    ]
-  },
-   {
-    "label": "NVK",
-    "submenu": [
-      {
-        "label": "WASHING - WT",
-        "path": "/listFormProductNVK?machine_name=WT"
-      }
-    ]
-  }
-]
+    {
+      "label": "BPI",
+      "submenu": [
+        {
+          "label": "TN SLV+CONE - TN",
+          "path": "/listFormProductBPI?machine_name=TN"
+        },
+        {
+          "label": "CS SUB CUT - CS",
+          "path": "/listFormProductBPI?machine_name=CS"
+        },
+        {
+          "label": "SB SUB CUT - SB",
+          "path": "/listFormProductBPI?machine_name=SB"
+        },
+        {
+          "label": "CH SUB CUT - CH",
+          "path": "/listFormProductBPI?machine_name=CH"
+        },
+        {
+          "label": "TN SHAFT - TB",
+          "path": "/listFormProductBPI?machine_name=TB"
+        },
+        {
+          "label": "TN SHAFT - TBM",
+          "path": "/listFormProductBPI?machine_name=TBM"
+        },
+        {
+          "label": "TN SHAFT - TBS",
+          "path": "/listFormProductBPI?machine_name=TBS"
+        },
+        {
+          "label": "TN SHAFT - TTC",
+          "path": "/listFormProductBPI?machine_name=TTC"
+        },
+        {
+          "label": "TN SHAFT - TCH",
+          "path": "/listFormProductBPI?machine_name=TCH"
+        },
+        {
+          "label": "WASHING - WT",
+          "path": "/listFormProductBPI?machine_name=WT"
+        }
+      ]
+    },
+    {
+      "label": "BPI TO NVK",
+      "submenu": [
+        {
+          "label": "WASHING - WT",
+          "path": "/listFormProductBPIToNVK?machine_name=WT"
+        }
+      ]
+    },
+     {
+      "label": "NVK",
+      "submenu": [
+        {
+          "label": "WASHING - WT",
+          "path": "/listFormProductNVK?machine_name=WT"
+        }
+      ]
+    }
+  ]
+  
