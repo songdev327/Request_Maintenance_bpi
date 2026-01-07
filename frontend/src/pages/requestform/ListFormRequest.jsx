@@ -416,7 +416,7 @@ function ListFormRequest() {
                         />
                     </Badge>
                 </div>
-
+                
                 <div
                     style={{ textAlign: "left", cursor: approvePendingCount > 0 ? "pointer" : "default" }}
                     className="mr-5"
@@ -618,10 +618,24 @@ function ListFormRequest() {
                                     {item.work_by}
                                 </td>
 
-                                <td className={item.corrective ? "approve-green" : ""}
+                                {/* <td className={item.corrective ? "approve-green" : ""}
                                 >
                                     {item.corrective || '-'}
+                                </td> */}
+
+                                  <td
+                                    className={
+                                        item.corrective
+                                            ? String(item.corrective).toUpperCase().includes("WAIT SPARE PART")
+                                                ? "approve-orange"
+                                                : "approve-green"
+                                            : ""
+                                    }
+                                >
+                                    {item.corrective || "-"}
                                 </td>
+
+
                                 <td className={item.result ? "approve-green" : ""}
                                 >
                                     {item.result || '-'}
@@ -669,7 +683,7 @@ function ListFormRequest() {
                                 </td>
 
                                 <td className={item.approve_by ? "approve-green" : ""}>
-                                    {item.approve_by}
+                                    {item.approve_by || "-"}
                                 </td>
                             </tr>
                         )) : (

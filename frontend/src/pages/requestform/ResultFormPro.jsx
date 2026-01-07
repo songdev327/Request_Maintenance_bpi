@@ -612,7 +612,7 @@ function ResultFormPro() {
                             />
                         </div>
 
-                          <div className="mr-col-4 mr-line-wrap mt-2">
+                        <div className="mr-col-4 mr-line-wrap mt-2">
                                     <div className="mr-label" style={{ fontSize: "0.9rem" }}>Cause (สาเหตุ)</div>
                                     <input
                                         value={formData.cause_mm || ""}

@@ -112,14 +112,14 @@ app.use('/MachineSerial', require('./controllers/MachineSerialController'));
 
 //-------------- End Update data base ---------------------------------------------------
 
+
 //------ Start Run server on Linux -------------------------------------------
 
-// ========== Fallback to React (สำหรับ React Router) ==========
+// // ========== Fallback to React (สำหรับ React Router) ==========
 
 // app.get(/.*/, (req, res) => {
 //   res.sendFile(path.join(__dirname, "../frontend/build/index.html"));
 // });
-
 
 
 //------ End Run server on Linux --------------------------------------------
@@ -154,7 +154,7 @@ app.use('/MachineSerial', require('./controllers/MachineSerialController'));
 
 //------ Start Run server on Linux -------------------------------------------
 
-// ========== DB Connect & Start Server ==========
+// // ========== DB Connect & Start Server ==========
 // (async () => {
 //   try {
 //     await conn.authenticate();

@@ -1198,7 +1198,7 @@ function ResultFormProToMM() {
                                     </div>
 
                                     <div className="mr-col-4 mr-line-wrap">
-                                        <div className="mr-label" style={{ fontSize: "0.9rem" }}>TO TIME</div>
+                                        <div className="mr-label" style={{ fontSize: "0.9rem" }}>TIME</div>
                                         <input
                                             type="text"
                                             className="mr-line text-primary"
@@ -1324,7 +1324,190 @@ function ResultFormProToMM() {
                                 </div>
                             </section>
 
+                            {/* Cause of Problem */}
+                            {/* <section className="mr-section">
+                                <div className="mr-subtitle big">สาเหตุที่กระทบความผิดปกติ ( CAUSE OF PROBLEM )</div>
 
+                                <div className="cause-panel">
+                                    <div className="cause-columns">
+                                      
+                                        <div className="cause-col">
+                                            <div className="cause-title">คน (Member)</div>
+
+                                            <div className="cause-radio">
+                                                <label>
+                                                    <input
+                                                        type="radio"
+                                                        name="member_mode"
+                                                        checked={formData.cause_member_mode === "mm"}
+                                                    />{" "}
+                                                    M/M
+                                                </label>
+                                                <label>
+                                                    <input
+                                                        type="radio"
+                                                        name="member_mode"
+                                                        checked={formData.cause_member_mode === "production"}
+                                                    />{" "}
+                                                    PRODUCTION
+                                                </label>
+                                            </div>
+
+                                            <div className="mr-checkboxes">
+                                                <label>
+                                                    <input
+                                                        type="checkbox"
+                                                        checked={formData.cause_member.not_understand} readOnly
+                                                    />
+                                                    ไม่เข้าใจ (Not Understand)
+                                                </label>
+                                                <label>
+                                                    <input
+                                                        type="checkbox"
+                                                        checked={formData.cause_member.not_checking} readOnly
+                                                    />
+                                                    ไม่ตรวจเช็ค (Not Checking)
+                                                </label>
+                                                <label>
+                                                    <input
+                                                        type="checkbox"
+                                                        checked={formData.cause_member.absent} readOnly
+                                                    />
+                                                    ขาดงาน (Absent)
+                                                </label>
+                                                <label>
+                                                    <input
+                                                        type="checkbox"
+                                                        checked={formData.cause_member.not_carefully} readOnly
+                                                    />
+                                                    ทำด้วยไม่ถี่ถ้วน (Not Carefully)
+                                                </label>
+                                                <label>
+                                                    <input
+                                                        type="checkbox"
+                                                        checked={formData.cause_member.repair_error} readOnly
+                                                    />
+                                                    ทำไม่ดี (Repair Error)
+                                                </label>
+                                            </div>
+                                        </div>
+
+                                        <div className="cause-col">
+                                            <div className="cause-title">เครื่องจักร (Machine)</div>
+                                            <div className="mr-checkboxes">
+                                                <label>
+                                                    <input
+                                                        type="checkbox"
+                                                        checked={formData.cause_machine.operate_error} readOnly
+
+                                                    />
+                                                    Operate Error
+                                                </label>
+                                                <label>
+                                                    <input
+                                                        type="checkbox"
+                                                        checked={formData.cause_machine.design_error} readOnly
+
+                                                    />
+                                                    ออกแบบไม่ดี (Design Error)
+                                                </label>
+                                            </div>
+                                        </div>
+
+                                        <div className="cause-col">
+                                            <div className="cause-title">รูปภัณฑ์ (Spare parts)</div>
+                                            <div className="mr-checkboxes">
+                                                <label>
+                                                    <input
+                                                        type="checkbox"
+                                                        checked={formData.cause_spare.spare_damage} readOnly
+
+                                                    />
+                                                    เสื่อมสภาพ(Degenerate)
+                                                </label>
+                                                <label>
+                                                    <input
+                                                        type="checkbox"
+                                                        checked={formData.cause_spare.quality_fail} readOnly
+
+                                                    />
+                                                    คุณภาพไม่ดี(Quality Fail)
+                                                </label>
+                                                <label>
+                                                    <input
+                                                        type="checkbox"
+                                                        checked={formData.cause_spare.inappropriate} readOnly
+
+                                                    />
+                                                    ไม่เหมาะสมกับงาน(Unappropriate)
+                                                </label>
+                                                <label>
+                                                    <input
+                                                        type="checkbox"
+                                                        checked={formData.cause_spare.not_lubricant} readOnly
+
+                                                    />
+                                                    ขาดการหล่อลื่น (Not Lubricant)
+                                                </label>
+                                                <label>
+                                                    <input
+                                                        type="checkbox"
+                                                        checked={formData.cause_spare.loosen} readOnly
+
+                                                    />
+                                                    หลวม คลอน คาย (Loosen)
+                                                </label>
+                                            </div>
+                                        </div>
+
+                                        <div className="cause-col">
+                                            <div className="cause-title">กระบวนการผลิต (Product Proc.)</div>
+                                            <div className="mr-checkboxes">
+                                                <label>
+                                                    <input
+                                                        type="checkbox"
+                                                        checked={formData.cause_product_process.dirty} readOnly
+
+                                                    />
+                                                    สกปรก (Dirty)
+                                                </label>
+                                                <label>
+                                                    <input
+                                                        type="checkbox"
+                                                        checked={formData.cause_product_process.high_temp} readOnly
+
+                                                    />
+                                                    อุณหภูมิสูง (High Temp.)
+                                                </label>
+                                                <label>
+                                                    <input
+                                                        type="checkbox"
+                                                        checked={formData.cause_product_process.product_spare_error} readOnly
+
+                                                    />
+                                                    Product Spare Error
+                                                </label>
+                                                <label>
+                                                    <input
+                                                        type="checkbox"
+                                                        checked={formData.cause_product_process.water_leak} readOnly
+
+                                                    />
+                                                    น้ำรั่ว (Water Leak)
+                                                </label>
+                                                <label>
+                                                    <input
+                                                        type="checkbox"
+                                                        checked={formData.cause_product_process.chemical_gas} readOnly
+
+                                                    />
+                                                    สารเคมี/แก๊ส (Chemical, Gas)
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </section> */}
 
                             {/* Corrective / Result */}
                             <section className="mr-section">
@@ -1505,7 +1688,8 @@ function ResultFormProToMM() {
                                     </div>
                                 </div>
 
-                                {!machineData.work_by && !machineData.corrective && (
+                                {/* {!machineData.repair_accept_by && !machineData.corrective && ( */}
+                                {!machineData.result &&  (
                                     <>
                                         <div className="col-12 mt-2">
                                             <button
@@ -1797,17 +1981,111 @@ function ResultFormProToMM() {
                             </div>
                         </section>
 
+                        {/* ✅ ส่วน CAUSE OF PROBLEM */}
+                        {/* <section className="mr-section">
+                            <div className="mr-subtitle big">สาเหตุที่กระทบความผิดปกติ ( CAUSE OF PROBLEM )</div>
+                            <div className="cause-panel">
+                                <div className="cause-columns">
+                                  
+                                    <div className="cause-col">
+                                        <div className="cause-title">คน (Member)</div>
+
+                                    
+                                        <div className="cause-radio">
+                                            <label>
+                                                <input
+                                                    type="radio"
+                                                    name="member_mode_modal"
+                                                    checked={formData.cause_member_mode === "mm"}
+                                                    onClick={() => {
+                                                        setField(
+                                                            "cause_member_mode",
+                                                            formData.cause_member_mode === "mm" ? "" : "mm"
+                                                        );
+                                                    }}
+                                                />{" "}
+                                                M/M
+                                            </label>
+
+                                            <label>
+                                                <input
+                                                    type="radio"
+                                                    name="member_mode_modal"
+                                                    checked={formData.cause_member_mode === "production"}
+                                                    onClick={() => {
+                                                        setField(
+                                                            "cause_member_mode",
+                                                            formData.cause_member_mode === "production" ? "" : "production"
+                                                        );
+                                                    }}
+                                                />{" "}
+                                                PRODUCTION
+                                            </label>
+                                        </div>
+
+                                        <div className="mr-checkboxes">
+                                            <label><input type="checkbox" checked={formData.cause_member.not_understand} onChange={e => setNested("cause_member", "not_understand", e.target.checked)} /> ไม่เข้าใจ (Not Understand)</label>
+                                            <label><input type="checkbox" checked={formData.cause_member.not_checking} onChange={e => setNested("cause_member", "not_checking", e.target.checked)} /> ไม่ตรวจเช็ค (Not Checking)</label>
+                                            <label><input type="checkbox" checked={formData.cause_member.absent} onChange={e => setNested("cause_member", "absent", e.target.checked)} /> ขาดงาน (Absent)</label>
+                                            <label><input type="checkbox" checked={formData.cause_member.not_carefully} onChange={e => setNested("cause_member", "not_carefully", e.target.checked)} /> ทำด้วยไม่ถี่ถ้วน (Not Carefully)</label>
+                                            <label><input type="checkbox" checked={formData.cause_member.repair_error} onChange={e => setNested("cause_member", "repair_error", e.target.checked)} /> ทำไม่ดี (Repair Error)</label>
+                                        </div>
+                                    </div>
+
+                                  
+                                    <div className="cause-col">
+                                        <div className="cause-title">เครื่องจักร (Machine)</div>
+                                        <div className="mr-checkboxes">
+                                            <label><input type="checkbox" checked={formData.cause_machine.operate_error} onChange={e => setNested("cause_machine", "operate_error", e.target.checked)} /> Operate Error</label>
+                                            <label><input type="checkbox" checked={formData.cause_machine.design_error} onChange={e => setNested("cause_machine", "design_error", e.target.checked)} /> ออกแบบไม่ดี (Design Error)</label>
+                                        </div>
+                                    </div>
+
+                                 
+                                    <div className="cause-col">
+                                        <div className="cause-title">รูปภัณฑ์ (Spare parts)</div>
+                                        <div className="mr-checkboxes">
+                                            <label><input type="checkbox" checked={formData.cause_spare.spare_damage} onChange={e => setNested("cause_spare", "spare_damage", e.target.checked)} /> เสื่อมสภาพ(Degenerate)</label>
+                                            <label><input type="checkbox" checked={formData.cause_spare.quality_fail} onChange={e => setNested("cause_machine", "quality_fail", e.target.checked)} /> คุณภาพไม่ดี(Quality Fail)</label>
+                                            <label><input type="checkbox" checked={formData.cause_spare.inappropriate} onChange={e => setNested("cause_machine", "inappropriate", e.target.checked)} /> ไม่เหมาะสมกับงาน(Unappropriate)</label>
+                                            <label><input type="checkbox" checked={formData.cause_spare.not_lubricant} onChange={e => setNested("cause_machine", "not_lubricant", e.target.checked)} /> ขาดการหล่อลื่น (Not Lubricant)</label>
+                                            <label><input type="checkbox" checked={formData.cause_spare.loosen} onChange={e => setNested("cause_machine", "loosen", e.target.checked)} /> หลวม คลอน คาย (Loosen)</label>
+                                        </div>
+                                    </div>
+
+                                 
+                                    <div className="cause-col">
+                                        <div className="cause-title">กระบวนการผลิต (Product Proc.)</div>
+                                        <div className="mr-checkboxes">
+                                            <label><input type="checkbox" checked={formData.cause_product_process.dirty} onChange={e => setNested("cause_product_process", "dirty", e.target.checked)} /> สกปรก (Dirty)</label>
+                                            <label><input type="checkbox" checked={formData.cause_product_process.high_temp} onChange={e => setNested("cause_product_process", "high_temp", e.target.checked)} /> อุณหภูมิสูง (High Temp.)</label>
+                                            <label><input type="checkbox" checked={formData.cause_product_process.product_spare_error} onChange={e => setNested("cause_spare", "product_spare_error", e.target.checked)} /> Product Spare Error</label>
+                                            <label><input type="checkbox" checked={formData.cause_product_process.water_leak} onChange={e => setNested("cause_product_process", "water_leak", e.target.checked)} /> น้ำรั่ว (Water Leak)</label>
+                                            <label><input type="checkbox" checked={formData.cause_product_process.chemical_gas} onChange={e => setNested("cause_product_process", "chemical_gas", e.target.checked)} /> สารเคมี/แก๊ส (Chemical, Gas)</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section> */}
 
                         {/* ✅ ส่วน Corrective / Result */}
                         <section className="mr-section">
                             <div className="mr-row">
                                 <div className="mr-col-24 mr-line-wrap">
                                     <div className="mr-label">Corrective (การแก้ไข)</div>
-                                    <textarea
+                                    {/* <textarea
                                         rows={2}
                                         className="mr-box dotted text-primary"
                                         value={formData.corrective || ""}
                                         onChange={(e) => setField("corrective", e.target.value.toUpperCase())}
+                                    /> */}
+                                    <textarea
+                                        rows={2}
+                                        className="mr-box dotted text-primary"
+                                        style={{ textTransform: 'uppercase' }}  // ✅ เพิ่ม: ให้แสดงผลเป็นตัวใหญ่
+                                        value={formData.corrective || ""}
+                                        onChange={(e) => setFormData(prev => ({ ...prev, corrective: e.target.value }))} // ✅ แก้: รับค่าปกติ (Cursor ไม่เด้ง)
+                                        onBlur={(e) => setFormData(prev => ({ ...prev, corrective: toUpper(e.target.value) }))} // ✅ เพิ่ม: แปลงเป็นตัวใหญ่เมื่อพิมพ์เสร็จ
                                     />
                                 </div>
 

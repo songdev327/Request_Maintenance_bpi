@@ -31,6 +31,8 @@ function ResultFormProToMMSetting() {
     const [openCorrective, setOpenCorrective] = useState(false);
     const [hiIdx, setHiIdx] = useState(-1); // ไฮไลต์ด้วยคีย์บอร์ด
 
+    const [isWaitSpare, setIsWaitSpare] = useState(false);
+
 
     // ⬅️ อ้างอิง A4 กล่องที่จะทำ PDF
     // ✅ ดึง id จาก URL
@@ -654,6 +656,136 @@ function ResultFormProToMMSetting() {
         }
     };
 
+    const handleUpdate_wait_spare_to_pro = async () => {
+
+        // คำนวณใหม่ทุกครั้งก่อนส่ง
+        const safeTotal = calcTotalHours(
+            formData.from_date,
+            formData.from_time,
+            formData.to_date,
+            formData.to_time
+        );
+
+        // ถ้ายังคำนวณไม่ได้หรือช่วงเวลาไม่ถูกต้อง → แจ้งเตือน
+        if (safeTotal === "") {
+            Swal.fire({
+                icon: "warning",
+                title: "ตรวจสอบช่วงเวลา",
+                text: "กรุณากรอก FROM/TO ให้ครบ และให้ TO มากกว่า FROM",
+            });
+            return;
+        }
+
+        // ⛔ ตรวจสอบ Corrective และ Result
+        if (!formData.corrective) {
+            Swal.fire({
+                icon: "warning",
+                title: "ข้อมูลไม่ครบ",
+                text: "กรุณากรอก Corrective ให้ครบก่อนบันทึก",
+            });
+            return;
+        }
+
+        // ตรวจสอบ Spare Parts: ถ้ามี name, model, maker, unit แต่ไม่มี qty ให้แสดงแจ้งเตือน
+        const missingQty = formData.spare_parts.find(
+            (sp) =>
+                (sp.name || sp.model || sp.maker || sp.unit) &&
+                (!sp.qty || sp.qty === "")
+        );
+
+        if (missingQty) {
+            Swal.fire({
+                icon: "warning",
+                title: "ข้อมูลไม่ครบ",
+                text: "กรุณากรอก Quantity ให้ครบทุกชิ้นส่วนที่มีข้อมูล",
+            });
+            return;
+        }
+
+        try {
+            const payload = {
+                ...formData,
+
+                time: formData.time,
+                date: formData.date,
+
+                requestor_name: formData.requestor_name,
+
+                shift: formData.shift,
+                section: formData.section,
+                shift_leader: formData.shift_leader,
+
+                machine_name: formData.machine_name,
+                machine_no: formData.machine_no,
+                machine_request_name: `${formData.machine_name}-${formData.machine_no}`,
+                Machine_No: `${formData.machine_name}-${formData.machine_no}`,
+
+                machine_stop_time: formData.machine_stop_time,
+
+                Location_Name: formData.Location_Name,
+
+                machine_status: formData.machine_status,
+                brief_description: formData.brief_description,
+                production_action: formData.production_action,
+
+                receive_time: formData.receive_time,
+
+                total_hr: safeTotal, // ⬅️ ใช้ค่าที่คำนวณได้
+                cause_member_mode: formData.cause_member_mode,
+                cause_member: formData.cause_member,
+                cause_machine: formData.cause_machine,
+                cause_spare: formData.cause_spare,
+                cause_product_process: formData.cause_product_process,
+
+                corrective: formData.corrective,
+                remark_in_progress: formData.corrective,
+
+                result: formData.result,
+                spare_parts: formData.spare_parts,
+                control: formData.control,
+                approve_by: formData.approve_by,
+                work_by: formData.work_by,
+                from_date: formData.from_date,
+                from_time: formData.from_time,
+                to_date: formData.to_date,
+                to_time: formData.to_time,
+                request_status: "in progress",
+                cause_mm: formData.cause_mm,
+
+                Worker_Code_1: selectedEmployeeCode,
+                Worker_Name_1: formData.work_by,
+                Work_Start_Date: formData.from_date,
+                Work_Start_Time: formData.from_time,
+                Work_End_Date: formData.to_date,
+                Work_End_Time: formData.to_time,
+                Work_Total_Time: safeTotal,
+                Remark: formData.corrective,
+
+            };
+
+            const response = await axios.put(
+                `${config.api_path}/Maintenance/updateRequestToProSettingWaitSpare/${formData.id}`,
+                payload
+            );
+
+            if (response.data.success) {
+                Swal.fire({
+                    icon: "success",
+                    title: "บันทึกสำเร็จ",
+                    text: "ข้อมูลได้รับการอัปเดตเรียบร้อยแล้ว",
+                    timer: 1500
+                }).then(() => {
+                    navigate("/listFormRequestSetting");
+                });
+            } else {
+                Swal.fire("เกิดข้อผิดพลาด", "ไม่สามารถอัปเดตข้อมูลได้", "error");
+            }
+        } catch (error) {
+            console.error("Update failed:", error);
+            Swal.fire("เกิดข้อผิดพลาด", "ไม่สามารถเชื่อมต่อกับเซิร์ฟเวอร์ได้", "error");
+        }
+    };
+
     const handleUpdate_record_approve = async () => {
         if (!formData.approve_by) {
             Swal.fire({
@@ -1090,7 +1222,7 @@ function ResultFormProToMMSetting() {
                                 onChange={(v) => setField("to_time", v)}
                             />
                             <Line label="TOTAL (Hr.)" col={2} value={formData.total_hr || ""} readOnly /> */}
-                            
+
 
                             <div className="mr-col-4 mr-line-wrap">
                                 <div className="mr-label" style={{ fontSize: "0.9rem" }}>FROM DATE</div>
@@ -1148,14 +1280,16 @@ function ResultFormProToMMSetting() {
                             </div>
 
                         </div>
-                          <div className="mr-col-4 mr-line-wrap mt-2">
-                                    <div className="mr-label" style={{ fontSize: "0.9rem" }}>Cause (สาเหตุ)</div>
-                                    <input
-                                        value={formData.cause_mm || ""}
-                                        className="mr-line text-primary"
-                                        onChange={(e) => setField("cause_mm", e.target.value.toUpperCase())}
-                                    />
-                                </div>
+
+                        <div className="mr-col-4 mr-line-wrap mt-2">
+                            <div className="mr-label" style={{ fontSize: "0.9rem" }}>Cause (สาเหตุ)</div>
+                            <input
+                                value={formData.cause_mm || ""}
+                                className="mr-line text-primary"
+                                onChange={(e) => setField("cause_mm", e.target.value.toUpperCase())}
+                            />
+                        </div>
+
                         {/* </>
                         )} */}
                     </section>
@@ -1475,12 +1609,28 @@ function ResultFormProToMMSetting() {
                                                 เคลียร์
                                             </button>
                                         </div>
-                                        <div className="mr-label">Corrective (การแก้ไข)</div>
+
+                                        <div className="mr-label space-between">
+                                            <span>Corrective (การแก้ไข)</span>
+
+                                            <label className="wait-spare">
+                                                <input
+                                                    className="form-check-input wait-spare-checkbox"
+                                                    type="checkbox"
+                                                    checked={isWaitSpare}
+                                                    onChange={(e) => setIsWaitSpare(e.target.checked)}
+                                                />
+                                                wait spare
+                                            </label>
+                                        </div>
+
                                         <textarea
                                             rows={2}
                                             className="mr-box dotted text-primary"
+                                            style={{ textTransform: 'uppercase' }}  // ✅ เพิ่ม: ให้แสดงผลเป็นตัวใหญ่
                                             value={formData.corrective || ""}
-                                            onChange={(e) => setFormData(prev => ({ ...prev, corrective: toUpper(e.target.value) }))}
+                                            onChange={(e) => setFormData(prev => ({ ...prev, corrective: e.target.value }))} // ✅ แก้: รับค่าปกติ (Cursor ไม่เด้ง)
+                                            onBlur={(e) => setFormData(prev => ({ ...prev, corrective: toUpper(e.target.value) }))} // ✅ เพิ่ม: แปลงเป็นตัวใหญ่เมื่อพิมพ์เสร็จ
                                         />
                                     </div>
 
@@ -1592,31 +1742,46 @@ function ResultFormProToMMSetting() {
 
                                 {/* {!machineData.work_by && !machineData.corrective && ( */}
                                 <>
-                                    <div className="col-12 mt-2">
-                                        <button
-                                            className="col-6 btn btn-success"
-                                            onClick={handleUpdate_request_to_pro}
-                                        >
-                                            💾 Save Data recording completed
-                                        </button>
-                                    </div>
+                                    {!isWaitSpare && (
+                                        <div className="col-12 mt-2">
+                                            <button
+                                                className="col-6 btn btn-success"
+                                                disabled={isWaitSpare}
+                                                onClick={handleUpdate_request_to_pro}
+                                            >
+                                                💾 Save Data recording completed
+                                            </button>
+                                        </div>
+                                    )}
+
+                                    {isWaitSpare && (
+                                        <div className="col-12 mt-2">
+                                            <button
+                                                className="col-6 btn btn-warning"
+                                                onClick={handleUpdate_wait_spare_to_pro}
+                                            >
+                                                💾 Save Data wait spare part
+                                            </button>
+                                        </div>
+                                    )}
                                 </>
+
 
                                 {/* )} */}
 
-                                {/* {machineData.repair_accept_by && !machineData.approve_by && ( */}
-                                <>
-                                    <div className="col-12 mt-2 d-flex justify-content-end">
-                                        <button
-                                            className="col-5 btn btn-success"
-                                            // onClick={handleUpdate_record_approve}
-                                            onClick={() => setApproveModalOpen(true)}
-                                        >
-                                            💾 Save recording approve completed
-                                        </button>
-                                    </div>
-                                </>
-                                {/* )} */}
+                                {machineData.repair_accept_by && (
+                                    <>
+                                        <div className="col-12 mt-2 d-flex justify-content-end">
+                                            <button
+                                                className="col-5 btn btn-success"
+                                                // onClick={handleUpdate_record_approve}
+                                                onClick={() => setApproveModalOpen(true)}
+                                            >
+                                                💾 Save recording approve completed
+                                            </button>
+                                        </div>
+                                    </>
+                                )}
 
                             </section>
 
@@ -1880,117 +2045,6 @@ function ResultFormProToMMSetting() {
                                 </div>
                             </div>
                         </section>
-
-                        {/* ✅ ส่วน CAUSE OF PROBLEM */}
-                        {/* <section className="mr-section">
-                            <div className="mr-subtitle big">สาเหตุที่กระทบความผิดปกติ ( CAUSE OF PROBLEM )</div>
-
-                            <div className="cause-panel">
-                                <div className="cause-columns">
-            
-                                    <div className="cause-col">
-                                        <div className="cause-title">คน (Member)</div>
-
-                       
-                                        <div className="cause-radio">
-                                            <label>
-                                                <input
-                                                    type="radio"
-                                                    name="member_mode_modal"
-                                                    checked={formData.cause_member_mode === "mm"}
-                                                    onClick={() => {
-                                                        setField(
-                                                            "cause_member_mode",
-                                                            formData.cause_member_mode === "mm" ? "" : "mm"
-                                                        );
-                                                    }}
-                                                />{" "}
-                                                M/M
-                                            </label>
-
-                                            <label>
-                                                <input
-                                                    type="radio"
-                                                    name="member_mode_modal"
-                                                    checked={formData.cause_member_mode === "production"}
-                                                    onClick={() => {
-                                                        setField(
-                                                            "cause_member_mode",
-                                                            formData.cause_member_mode === "production" ? "" : "production"
-                                                        );
-                                                    }}
-                                                />{" "}
-                                                PRODUCTION
-                                            </label>
-                                        </div>
-
-                                        <div className="mr-checkboxes">
-                                            <label><input type="checkbox" checked={formData.cause_member.not_understand} onChange={e => setNested("cause_member", "not_understand", e.target.checked)} /> ไม่เข้าใจ (Not Understand)</label>
-                                            <label><input type="checkbox" checked={formData.cause_member.not_checking} onChange={e => setNested("cause_member", "not_checking", e.target.checked)} /> ไม่ตรวจเช็ค (Not Checking)</label>
-                                            <label><input type="checkbox" checked={formData.cause_member.absent} onChange={e => setNested("cause_member", "absent", e.target.checked)} /> ขาดงาน (Absent)</label>
-                                            <label><input type="checkbox" checked={formData.cause_member.not_carefully} onChange={e => setNested("cause_member", "not_carefully", e.target.checked)} /> ทำด้วยไม่ถี่ถ้วน (Not Carefully)</label>
-                                            <label><input type="checkbox" checked={formData.cause_member.repair_error} onChange={e => setNested("cause_member", "repair_error", e.target.checked)} /> ทำไม่ดี (Repair Error)</label>
-                                        </div>
-                                    </div>
-
-
-                                    <div className="cause-col">
-                                        <div className="cause-title">เครื่องจักร (Machine)</div>
-                                        <div className="mr-checkboxes">
-                                            <label><input type="checkbox" checked={formData.cause_machine.operate_error} onChange={e => setNested("cause_machine", "operate_error", e.target.checked)} /> Operate Error</label>
-                                            <label><input type="checkbox" checked={formData.cause_machine.design_error} onChange={e => setNested("cause_machine", "design_error", e.target.checked)} /> ออกแบบไม่ดี (Design Error)</label>
-                                        </div>
-                                    </div>
-
-                                    <div className="cause-col">
-                                        <div className="cause-title">รูปภัณฑ์ (Spare parts)</div>
-                                        <div className="mr-checkboxes">
-                                            <label><input type="checkbox" checked={formData.cause_spare.spare_damage} onChange={e => setNested("cause_spare", "spare_damage", e.target.checked)} /> เสื่อมสภาพ(Degenerate)</label>
-                                            <label><input type="checkbox" checked={formData.cause_spare.quality_fail} onChange={e => setNested("cause_machine", "quality_fail", e.target.checked)} /> คุณภาพไม่ดี(Quality Fail)</label>
-                                            <label><input type="checkbox" checked={formData.cause_spare.inappropriate} onChange={e => setNested("cause_machine", "inappropriate", e.target.checked)} /> ไม่เหมาะสมกับงาน(Unappropriate)</label>
-                                            <label><input type="checkbox" checked={formData.cause_spare.not_lubricant} onChange={e => setNested("cause_machine", "not_lubricant", e.target.checked)} /> ขาดการหล่อลื่น (Not Lubricant)</label>
-                                            <label><input type="checkbox" checked={formData.cause_spare.loosen} onChange={e => setNested("cause_machine", "loosen", e.target.checked)} /> หลวม คลอน คาย (Loosen)</label>
-                                        </div>
-                                    </div>
-
-                                    <div className="cause-col">
-                                        <div className="cause-title">กระบวนการผลิต (Product Proc.)</div>
-                                        <div className="mr-checkboxes">
-                                            <label><input type="checkbox" checked={formData.cause_product_process.dirty} onChange={e => setNested("cause_product_process", "dirty", e.target.checked)} /> สกปรก (Dirty)</label>
-                                            <label><input type="checkbox" checked={formData.cause_product_process.high_temp} onChange={e => setNested("cause_product_process", "high_temp", e.target.checked)} /> อุณหภูมิสูง (High Temp.)</label>
-                                            <label><input type="checkbox" checked={formData.cause_product_process.product_spare_error} onChange={e => setNested("cause_spare", "product_spare_error", e.target.checked)} /> Product Spare Error</label>
-                                            <label><input type="checkbox" checked={formData.cause_product_process.water_leak} onChange={e => setNested("cause_product_process", "water_leak", e.target.checked)} /> น้ำรั่ว (Water Leak)</label>
-                                            <label><input type="checkbox" checked={formData.cause_product_process.chemical_gas} onChange={e => setNested("cause_product_process", "chemical_gas", e.target.checked)} /> สารเคมี/แก๊ส (Chemical, Gas)</label>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </section> */}
-
-                        {/* ✅ ส่วน Corrective / Result */}
-                        {/* <section className="mr-section">
-                            <div className="mr-row">
-                                <div className="mr-col-24 mr-line-wrap">
-                                    <div className="mr-label">Corrective (การแก้ไข)</div>
-                                    <textarea
-                                        rows={2}
-                                        className="mr-box dotted text-primary"
-                                        value={formData.corrective || ""}
-                                        onChange={(e) => setField("corrective", e.target.value.toUpperCase())}
-                                    />
-                                </div>
-
-                                <div className="mr-col-24 mr-line-wrap">
-                                    <div className="mr-label">Result (ผล)</div>
-                                    <textarea
-                                        rows={2}
-                                        className="mr-box dotted text-primary"
-                                        value={formData.result || ""}
-                                        onChange={(e) => setField("result", e.target.value.toUpperCase())}
-                                    />
-                                </div>
-                            </div>
-                        </section> */}
 
                         <section className="mr-section">
                             <div className="form-row">

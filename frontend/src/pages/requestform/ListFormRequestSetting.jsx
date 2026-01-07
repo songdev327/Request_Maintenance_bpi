@@ -128,18 +128,18 @@ function ListFormRequestSetting() {
                 .replace(/'/g, "&#39;");
 
         const html = `
-            <ul style="text-align:left; margin:0; padding-left:18px;">
-                ${items.map(item => `
-                    <li>
-                        <b>${esc(item.Location_Name ?? "-")} : 
-                        ${esc(item.date ?? "-")} : 
-                        ${esc(item.machine_request_name ?? "-")}</b> :
-                        <span style="color:#d32f2f; font-weight:600;">${esc(item.brief_description ?? "-")} </span> :
-                        <span style="color:#0222f6; font-weight:600;">${esc(item.corrective ?? "-")} </span>
-                    </li>
-                `).join("")}
-            </ul>
-        `;
+        <ul style="text-align:left; margin:0; padding-left:18px;">
+            ${items.map(item => `
+                <li>
+                    <b>${esc(item.Location_Name ?? "-")} : 
+                    ${esc(item.date ?? "-")} : 
+                    ${esc(item.machine_request_name ?? "-")}</b> :
+                    <span style="color:#d32f2f; font-weight:600;">${esc(item.brief_description ?? "-")} </span> :
+                    <span style="color:#0222f6; font-weight:600;">${esc(item.corrective ?? "-")} </span>
+                </li>
+            `).join("")}
+        </ul>
+    `;
 
         Swal.fire({
             title: `รายการรอ Approve (${items.length})`,
@@ -280,7 +280,8 @@ function ListFormRequestSetting() {
                 params: {
                     startDate: startDate,
                     endDate: endDate,
-                    location: locFilter // ✅ เพิ่ม location filter
+                    location: locFilter, // ✅ เพิ่ม location filter
+                    status: "finished,in progress,กำลังดำเนินการ" // ✅ Send as string
                 },
             });
             setData(response.data); // set state ของข้อมูล
@@ -615,7 +616,7 @@ function ListFormRequestSetting() {
                         </div>
 
                     </div>
-                    
+
                 </h4>
             </div>
 
@@ -787,6 +788,50 @@ function ListFormRequestSetting() {
 
             </div>
 
+
+            {/* NEW: Pagination bar */}
+            <div className="d-flex justify-content-between align-items-center mb-4 mt-2">
+                <div>แสดง {totalItems === 0 ? 0 : startIdx + 1}-{Math.min(startIdx + pageSize, totalItems)} จาก {totalItems} รายการ</div>
+                <nav>
+                    <ul className="pagination mb-0">
+                        <li className={`page-item ${page === 1 ? "disabled" : ""}`}>
+                            <button className="page-link" onClick={() => goto(1)}>« First</button>
+                        </li>
+                        <li className={`page-item ${page === 1 ? "disabled" : ""}`}>
+                            <button className="page-link" onClick={() => goto(page - 1)}>‹ Prev</button>
+                        </li>
+
+                        {/* แสดงหมายเลขหน้าแบบย่อ */}
+                        {Array.from({ length: totalPages }, (_, i) => i + 1)
+                            .filter(p => (p === 1 || p === totalPages || Math.abs(p - page) <= 2))
+                            .map((p, idx, arr) => {
+                                const prev = arr[idx - 1];
+                                const needDots = prev && p - prev > 1;
+                                return (
+                                    <>
+                                        {needDots && (
+                                            <li key={`dots-${p}`} className="page-item disabled">
+                                                <span className="page-link">…</span>
+                                            </li>
+                                        )}
+                                        <li key={p} className={`page-item ${p === page ? "active" : ""}`}>
+                                            <button className="page-link" onClick={() => goto(p)}>{p}</button>
+                                        </li>
+                                    </>
+                                );
+                            })
+                        }
+
+                        <li className={`page-item ${page === totalPages ? "disabled" : ""}`}>
+                            <button className="page-link" onClick={() => goto(page + 1)}>Next ›</button>
+                        </li>
+                        <li className={`page-item ${page === totalPages ? "disabled" : ""}`}>
+                            <button className="page-link" onClick={() => goto(totalPages)}>Last »</button>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+
             {/* ตาราง */}
             <div className="table-responsive">
                 <table className="table table-bordered table-striped table-bordered-black">
@@ -844,8 +889,21 @@ function ListFormRequestSetting() {
                                     {item.work_by}
                                 </td>
 
-                                <td className={item.corrective ? "approve-green" : ""}>
-                                    {item.corrective || '-'}</td>
+                                {/* <td className={item.corrective ? "approve-green" : ""}>
+                                    {item.corrective || '-'}</td> */}
+
+                                <td
+                                    className={
+                                        item.corrective
+                                            ? String(item.corrective).toUpperCase().includes("WAIT SPARE PART")
+                                                ? "approve-orange"
+                                                : "approve-green"
+                                            : ""
+                                    }
+                                >
+                                    {item.corrective || "-"}
+                                </td>
+
                                 <td className={item.result ? "approve-green" : ""}>
                                     {item.result || '-'}</td>
                                 <td className={
@@ -917,48 +975,6 @@ function ListFormRequestSetting() {
             />
 
 
-            {/* NEW: Pagination bar */}
-            <div className="d-flex justify-content-between align-items-center mb-4">
-                <div>แสดง {totalItems === 0 ? 0 : startIdx + 1}-{Math.min(startIdx + pageSize, totalItems)} จาก {totalItems} รายการ</div>
-                <nav>
-                    <ul className="pagination mb-0">
-                        <li className={`page-item ${page === 1 ? "disabled" : ""}`}>
-                            <button className="page-link" onClick={() => goto(1)}>« First</button>
-                        </li>
-                        <li className={`page-item ${page === 1 ? "disabled" : ""}`}>
-                            <button className="page-link" onClick={() => goto(page - 1)}>‹ Prev</button>
-                        </li>
-
-                        {/* แสดงหมายเลขหน้าแบบย่อ */}
-                        {Array.from({ length: totalPages }, (_, i) => i + 1)
-                            .filter(p => (p === 1 || p === totalPages || Math.abs(p - page) <= 2))
-                            .map((p, idx, arr) => {
-                                const prev = arr[idx - 1];
-                                const needDots = prev && p - prev > 1;
-                                return (
-                                    <>
-                                        {needDots && (
-                                            <li key={`dots-${p}`} className="page-item disabled">
-                                                <span className="page-link">…</span>
-                                            </li>
-                                        )}
-                                        <li key={p} className={`page-item ${p === page ? "active" : ""}`}>
-                                            <button className="page-link" onClick={() => goto(p)}>{p}</button>
-                                        </li>
-                                    </>
-                                );
-                            })
-                        }
-
-                        <li className={`page-item ${page === totalPages ? "disabled" : ""}`}>
-                            <button className="page-link" onClick={() => goto(page + 1)}>Next ›</button>
-                        </li>
-                        <li className={`page-item ${page === totalPages ? "disabled" : ""}`}>
-                            <button className="page-link" onClick={() => goto(totalPages)}>Last »</button>
-                        </li>
-                    </ul>
-                </nav>
-            </div>
         </>
     )
 }

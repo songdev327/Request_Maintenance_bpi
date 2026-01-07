@@ -709,11 +709,58 @@ app.get('/exportByDate', async (req, res) => {
     const start = new Date(`${startDate}T00:00:00.000`);
     const end = new Date(`${endDate}T23:59:59.999`);
 
-    // เงื่อนไข where
-    const whereCondition = {
-      createdAt: { [Op.between]: [start, end] },
-      request_status: status,
-    };
+    // ✅ แยก logic: Finished ดูตามวันที่, In Progress ดูทั้งหมด (Backlog)
+    let statusList = [];
+    if (status) {
+      if (Array.isArray(status)) statusList = status;
+      else if (typeof status === 'string') {
+        statusList = status.split(",").map(s => s.trim()).filter(s => s);
+      }
+
+      // ✅ Add Title Case variations just in case
+      if (statusList.includes('in progress')) {
+        statusList.push('In Progress');
+        statusList.push('IN PROGRESS');
+      }
+    } else {
+      statusList = ['finished']; // default
+    }
+
+    const whereCondition = {};
+
+    // Filter Location
+    if (location && location !== "ALL") {
+      whereCondition.Location_Name = location;
+    }
+
+    // Filter Status & Date
+    const finishedStatus = 'finished';
+    const inProgressStatuses = statusList.filter(s => s !== finishedStatus && s !== '');
+    const includeFinished = statusList.includes(finishedStatus);
+
+    const conditions = [];
+
+    // 1. Finished ต้องอยู่ในช่วงวันที่
+    if (includeFinished) {
+      conditions.push({
+        request_status: finishedStatus,
+        createdAt: { [Op.between]: [start, end] }
+      });
+    }
+
+    // 2. In Progress เอามาทั้งหมด (ไม่สนวันที่)
+    if (inProgressStatuses.length > 0) {
+      conditions.push({
+        request_status: { [Op.in]: inProgressStatuses }
+      });
+    }
+
+    // ถ้าไม่มี finished และไม่มี in progress ให้ใช้วันที่เป็นหลัก (fallback)
+    if (conditions.length === 0) {
+      whereCondition.createdAt = { [Op.between]: [start, end] };
+    } else {
+      whereCondition[Op.or] = conditions;
+    }
 
     // ✅ ถ้ามีการส่ง location มา และไม่ใช่ "ALL", ค่อยเพิ่มเข้าเงื่อนไข
     if (location && location !== "ALL") {
@@ -724,6 +771,8 @@ app.get('/exportByDate', async (req, res) => {
       where: whereCondition,
       order: [['createdAt', 'ASC']],
     });
+
+    console.log("Found Results:", results.length);
 
     res.json(results);
   } catch (error) {
@@ -920,7 +969,7 @@ app.put('/updateRequestToProSetting/:id', async (req, res) => {
     corrective,
     result,
     cause_mm,
-    
+
     spare_parts,
     control,
     approve_by,
@@ -974,7 +1023,131 @@ app.put('/updateRequestToProSetting/:id', async (req, res) => {
       corrective,
       result,
       cause_mm,
+      
+      spare_parts,
+      control,
+      approve_by,
+      work_by,         // ✅ เพิ่ม
+      from_date,       // ✅ เพิ่ม
+      from_time,       // ✅ เพิ่ม
+      to_date,         // ✅ เพิ่ม
+      to_time,         // ✅ เพิ่ม
+      total_hr,         // ✅ เพิ่ม
+      request_status, // ✅ ดึงมาจาก body
 
+      Worker_Code_1,
+      Worker_Name_1,
+      Work_Start_Date,
+      Work_Start_Time,
+      Work_End_Date,
+      Work_End_Time,
+      Work_Total_Time,
+      Remark,
+    }, {
+      where: { id }
+    });
+
+    const updated = await Maintenance.findByPk(id);  // 👈 เพิ่ม
+
+    const io = req.app.get('io');
+    io.emit('maintenance:update', updated.get({ plain: true }));
+
+
+    res.json({ success: true });
+  } catch (error) {
+    console.error("Error updating request:", error);
+    res.status(500).json({ success: false, message: "Update failed" });
+  }
+});
+app.put('/updateRequestToProSettingWaitSpare/:id', async (req, res) => {
+  const { id } = req.params;
+  const {
+
+    time,
+    date,
+    requestor_name,
+    shift,
+    section,
+    shift_leader,
+    machine_name,
+    machine_no,
+    machine_request_name,
+    Machine_No,
+    machine_stop_time,
+
+    Location_Name,
+    machine_status,
+    brief_description,
+    production_action,
+
+    receive_time,
+
+    cause_member_mode,
+    cause_member,
+    cause_machine,
+    cause_spare,
+    cause_product_process,
+
+    corrective,
+    remark_in_progress,
+    result,
+    cause_mm,
+
+    spare_parts,
+    control,
+    approve_by,
+    work_by,         // ✅ เพิ่ม
+    from_date,       // ✅ เพิ่ม
+    from_time,       // ✅ เพิ่ม
+    to_date,         // ✅ เพิ่ม
+    to_time,         // ✅ เพิ่ม
+    total_hr,        // ✅ เพิ่ม
+    request_status, // ✅ ดึงมาจาก body
+
+    Worker_Code_1,
+    Worker_Name_1,
+    Work_Start_Date,
+    Work_Start_Time,
+    Work_End_Date,
+    Work_End_Time,
+    Work_Total_Time,
+    Remark,
+
+  } = req.body;
+
+  try {
+    await Maintenance.update({
+
+      time,
+      date,
+      requestor_name,
+      shift,
+      section,
+      shift_leader,
+      machine_name,
+      machine_no,
+      machine_request_name,
+      Machine_No,
+      machine_stop_time,
+
+      Location_Name,
+      machine_status,
+      brief_description,
+      production_action,
+
+      receive_time,
+
+      cause_member_mode,
+      cause_member,
+      cause_machine,
+      cause_spare,
+      cause_product_process,
+
+      corrective,
+      remark_in_progress,
+      result,
+      cause_mm,
+      
       spare_parts,
       control,
       approve_by,

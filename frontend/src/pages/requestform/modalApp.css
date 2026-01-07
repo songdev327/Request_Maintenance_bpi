@@ -30,3 +30,19 @@ input[readonly] {
 .table-bordered-black td {
   border: 1px solid black !important;
 }
+
+.space-between {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.wait-spare {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.wait-spare-checkbox {
+    transform: scale(1.5);
+}

@@ -534,20 +534,24 @@ function ListFormProductBPI() {
                                     <br />
                                     {item.work_by}
                                 </td>
-                                <td className={item.corrective ? "approve-green" : ""}
+
+                                {/* <td className={item.corrective ? "approve-green" : ""}
                                 >
                                     {item.corrective || '-'}
+                                </td> */}
+
+                                   <td
+                                    className={
+                                        item.corrective
+                                            ? String(item.corrective).toUpperCase().includes("WAIT SPARE PART")
+                                                ? "approve-orange"
+                                                : "approve-green"
+                                            : ""
+                                    }
+                                >
+                                    {item.corrective || "-"}
                                 </td>
 
-                                {/* <td
-                                    className={(
-                                        (item.result === "OK" || item.result === "OK NEW SETUP") &&
-                                        item.pro_receive !== "Receive"
-                                    ) ? "blinking approve-green-pro" :
-                                        (item.result === "OK" || item.result === "OK NEW SETUP" ? "approve-green-pro" : "")}
-                                >
-                                    {item.result || ""}
-                                </td> */}
 
                                 <td
                                     className={
