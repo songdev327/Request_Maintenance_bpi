@@ -71,6 +71,12 @@ export default function MaintenanceFormPro() {
     const [employeeId, setEmployeeId] = useState("");
     const [employeeIdLoader, setEmployeeIdLoader] = useState("");
 
+    // ตัวเลือกจากไฟล์
+    const [correctiveOptions, setCorrectiveOptions] = useState([]);
+    const [correctiveQuery, setCorrectiveQuery] = useState("");
+    const [openCorrective, setOpenCorrective] = useState(false);
+    const [hiIdx, setHiIdx] = useState(-1); // ไฮไลต์ด้วยคีย์บอร์ด
+
     const location = useLocation();
 
     const navigate = useNavigate(); // ใช้ย้อนกลับ
@@ -113,6 +119,33 @@ export default function MaintenanceFormPro() {
             };
         });
     }, []);
+
+
+    useEffect(() => {
+        fetch("/data/case_pro.json")
+            .then(r => r.json())
+            .then(data => {
+                setCorrectiveOptions(data.brief_description || []);
+            })
+            .catch(err => console.error("โหลด case_pro.json ไม่สำเร็จ:", err));
+    }, []);
+
+    const toUpper = (s) => (s ?? "").toString().toUpperCase();
+    // เลือกแล้วใส่ลงฟอร์ม
+    const selectCorrective = (opt) => {
+        if (!opt) return;
+        setForm(prev => ({ ...prev, brief_description: toUpper(opt) }));
+        setCorrectiveQuery("");
+        setHiIdx(-1);
+        setOpenCorrective(false);
+    };
+
+    // กรองแบบ contains (ไม่สนตัวพิมพ์ใหญ่-เล็ก)
+    const filteredCorrective = useMemo(() => {
+        const q = correctiveQuery.trim().toLowerCase();
+        if (!q) return correctiveOptions;
+        return correctiveOptions.filter(o => o.toLowerCase().includes(q));
+    }, [correctiveQuery, correctiveOptions]);
 
     // const setField = (k, v) => setForm((p) => ({ ...p, [k]: v }));
     const setNested = (g, k, v) =>
@@ -574,14 +607,59 @@ export default function MaintenanceFormPro() {
                         </div>
 
                         {/* คำอธิบาย 2 ช่องถัดไป เหมือนเดิม */}
-                        <div className="mr-row">
-                            <Area
-                                label="BRIEF DESCRIPTION (รายละเอียด)"
-                                col={12}
-                                rows={3}
-                                value={form.brief_description}
-                                onChange={(v) => setField("brief_description", v.toUpperCase())}
+                        <div className="mr-col-24 mr-line-wrap">
+
+                            <div className="autocomplete mb-1">
+                                <input
+                                    className="mr-line text-primary mt-3"
+                                    placeholder="BRIEF DESCRIPTION (รายละเอียด)"
+                                    value={correctiveQuery}
+                                    onChange={(e) => { setCorrectiveQuery(e.target.value.toUpperCase()); setOpenCorrective(true); setHiIdx(-1); }}
+                                    onFocus={() => setOpenCorrective(true)}
+                                    onBlur={() => setTimeout(() => setOpenCorrective(false), 120)}  // หน่วงนิดให้คลิกไอเท็มได้
+                                    onKeyDown={(e) => {
+                                        if (!openCorrective) return;
+                                        if (e.key === "ArrowDown") { setHiIdx(i => Math.min(i + 1, filteredCorrective.length - 1)); e.preventDefault(); }
+                                        if (e.key === "ArrowUp") { setHiIdx(i => Math.max(i - 1, 0)); e.preventDefault(); }
+                                        if (e.key === "Enter") { selectCorrective(filteredCorrective[hiIdx] || correctiveQuery); e.preventDefault(); }
+                                        if (e.key === "Escape") { setOpenCorrective(false); }
+                                    }}
+                                />
+
+                                {openCorrective && filteredCorrective.length > 0 && (
+                                    <div className="ac-menu">
+                                        {filteredCorrective.slice(0, 6).map((opt, idx) => (
+                                            <div
+                                                key={opt}
+                                                className={`ac-item ${idx === hiIdx ? "active" : ""}`}
+                                                onMouseDown={() => selectCorrective(opt)}   // ใช้ mousedown กัน blur
+                                            >
+                                                {opt}
+                                            </div>
+                                        ))}
+                                    </div>
+                                )}
+                                {openCorrective && filteredCorrective.length === 0 && (
+                                    <div className="ac-menu ac-empty">ไม่พบรายการที่ตรงกับ “{correctiveQuery}”</div>
+                                )}
+                                <button type="button" className="btn btn-outline-danger"
+                                    onClick={() => { setForm(p => ({ ...p, brief_description: "" })); setCorrectiveQuery(""); }}>
+                                    เคลียร์
+                                </button>
+                            </div>
+
+                            <div className="mr-label">BRIEF DESCRIPTION (รายละเอียด)</div>
+                            <textarea
+                                rows={2}
+                                style={{ textTransform: 'uppercase' }}  // ✅ เพิ่ม: ให้แสดงผลเป็นตัวใหญ่
+                                className="mr-box dotted text-primary"
+                                value={form.brief_description || ""}
+                                // onChange={(e) => setForm(prev => ({ ...prev, brief_description: toUpper(e.target.value) }))}
+                                onChange={(e) => setForm(prev => ({ ...prev, brief_description: e.target.value }))} // ✅ แก้: รับค่าปกติ (Cursor ไม่เด้ง)
+                                onBlur={(e) => setForm(prev => ({ ...prev, brief_description: toUpper(e.target.value) }))} // ✅ เพิ่ม: แปลงเป็นตัวใหญ่เมื่อพิมพ์เสร็จ
                             />
+                        </div>
+                        <div className="mr-row">
                             <Area
                                 label="PRODUCTION ACTION (สิ่งที่ดำเนินการในฝ่ายผลิต)"
                                 col={12}
